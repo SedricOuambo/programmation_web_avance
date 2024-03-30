@@ -1,0 +1,103 @@
+/* navbarBAR */
+.navbar {
+    color: #fff;
+	height: var(--navbar-height);
+	background: var(--first-color);
+	padding: 0 24px;
+    padding-right: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 24px;
+	font-family: var(--lato);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: var(--z-fixed);
+}
+
+.logo{
+	font-size: var(--h3-font-size);
+	font-weight: var(--font-bold);
+}
+
+.bloc_droit{
+	display: flex;
+}
+
+.navbar a {
+	color: var(--dark);
+}
+.navbar .bx{
+	cursor: pointer;
+	color: #fff;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	height: 25px;
+    margin-right: 5rem;
+}
+
+.form input {
+	flex-grow: 1;
+	padding: 0 16px;
+	height: 100%;
+	border: none;
+	background: var(--grey);
+	border-radius: 36px 0 0 36px;
+	outline: none;
+	width: 100%;
+	color: var(--dark);
+}
+
+.form button {
+	width: 36px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--first-color-second);
+	color: var(--light);
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+.navbar .notification {
+	font-size: 20px;
+	position: relative;
+}
+
+.switch_mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
+}
+
+.switch_mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--first-color-second);
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+
+#switch_mode:checked + .switch_mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
+}
+/* NAVBAR */
+
+@media screen and (min-width: 768px){
+}

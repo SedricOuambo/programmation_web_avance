@@ -1,0 +1,46 @@
+.bloc {
+    margin-top: 3rem;
+}
+
+.bloc_titre {
+    display: flex;
+    gap: .5rem;
+    padding: 2rem;
+    background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
+    color: #fff;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium-bold);
+    border-radius: 10px;
+}
+
+.bloc_titre div{
+    font-style: italic;
+    font-weight: var(--font-semi-bold);
+}
+
+.bloc_objectifs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.bloc_objectifs span {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium-bold);
+}
+
+.bloc_objectifs div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: var(--small-font-size);
+    font-style: italic;
+    margin-left: 1.5rem;
+}
+
+.bloc_objectifs div nav{
+    font-size: var(--h2-font-size);
+}

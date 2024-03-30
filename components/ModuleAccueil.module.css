@@ -1,0 +1,35 @@
+.bloc{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+}
+
+.numero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    padding: 1rem;
+    background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
+    color: #fff;
+    border-radius: 50%;
+    font-weight: var( --font-medium-bold);
+    font-size: var(--small-font-size);
+}
+
+.nombre{
+    font-size: var(--h3-font-size);
+}
+
+.bloc_titre div{
+    font-size: var(--h2-font-size);
+    font-weight: var( --font-medium-bold);
+}
+
+.bloc_titre span{
+    font-size: var(--small-font-size);
+    font-style: italic;
+}
