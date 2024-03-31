@@ -1,9 +1,9 @@
 .bloc{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 0rem;
 }
 
 .numero{
@@ -11,25 +11,50 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .3rem;
-    padding: 1rem;
+    gap: .1rem;
+    padding: .8rem;
     background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
     color: #fff;
     border-radius: 50%;
-    font-weight: var( --font-medium-bold);
-    font-size: var(--small-font-size);
+    font-weight: var(--font-medium-bold);
+    font-size: var(--smaller-font-size);
 }
 
 .nombre{
-    font-size: var(--h3-font-size);
+    font-size: var(--small-font-size);
 }
 
 .bloc_titre div{
-    font-size: var(--h2-font-size);
+    font-size: var(--small-font-size);
     font-weight: var( --font-medium-bold);
 }
 
 .bloc_titre span{
     font-size: var(--small-font-size);
     font-style: italic;
+}
+
+@media screen and (min-width : 568px) {
+    .bloc{
+        margin-left: 2.5rem;
+    }
+
+    .bloc_titre div{
+        font-size: var(--h2-font-size);
+    }
+
+    .numero{
+        gap: .3rem;
+        padding: 1rem;
+        border-radius: 50%;
+        font-size: var(--small-font-size);
+    }
+
+    .nombre{
+        font-size: var(--h3-font-size);
+    }
+
+    .bloc{
+        gap: 1rem;
+    }
 }

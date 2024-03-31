@@ -8,7 +8,7 @@ export function IndexProvider({children}){
     const [index, setIndex] = useState('AC');
 
     useEffect(() => {
-        setIndex(localStorage.getItem('index') || '01');
+        setIndex(localStorage.getItem('index') || 'AC');
     }, [setIndex]);
 
     return <IndexContext.Provider value={[index, setIndex]}>

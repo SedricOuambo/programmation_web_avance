@@ -1,12 +1,19 @@
 .footer {
-    height: 15rem;
-    background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
-    color: #fff;
-    padding-bottom: 1rem;
-    margin-top: .1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
+  height: 15rem;
+  background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  margin-top: .1rem;
+}
+
+.footer span{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .3rem;
+}

@@ -5,13 +5,15 @@ import logo from '@/public/img/logo.webp';
 import Link from 'next/link';
 import BlocModule from './BlocModule';
 import { useIndex } from './IndexProvider'
+import {useHide} from './HideSliderProvider'
 
 export default function Slidebar() {
 
     const [activeIndex, setActiveIndex] = useIndex();
+    const [hide, setHide] = useHide();
     const handleClick = (index) => { setActiveIndex(index); }
 
-    return <section className={styles.slidebar}>
+    return <section className={styles.slidebar +' '+ (hide === "true" ? styles.hide : styles.display)}>
         <ul className={styles.slide_menu + ' ' + styles.top}>
             <li>
                 <Link href='/'

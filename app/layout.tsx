@@ -1,11 +1,15 @@
+'use client'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Slidebar from "@/components/Slidebar";
 import Header from "@/components/Header";
+import ArrowRight from "@/components/ArrowRight";
+import ArrowLeft from "@/components/ArrowLeft";
 import Footer from "@/components/Footer";
 import styles from './page.module.css'
 import { IndexProvider } from "@/components/IndexProvider";
+import { HideProvider } from "@/components/HideSliderProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,14 +27,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + ' ' + styles.body}>
         <IndexProvider>
-          <Header />
-          <main className={styles.main}>
-            <Slidebar />
-            <section className={styles.section_main}>
-              {children}
-            </section>
-          </main>
-          <Footer />
+          <HideProvider>
+            <Header />
+            <main className={styles.main}>
+              <Slidebar />
+              <ArrowRight/>
+              <ArrowLeft/>
+              <section className={styles.section_main}>
+                {children}
+              </section>
+            </main>
+            <Footer />
+          </HideProvider>
         </IndexProvider>
       </body>
     </html>

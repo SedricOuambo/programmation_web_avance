@@ -14,7 +14,7 @@
 }
 
 .section_main{
-  width: calc(100% - var(--slidebar-width))
+  width: 100%;
 }
 
 .section_main::before{
@@ -26,4 +26,18 @@
 	left: var(--slidebar-width);
 	border-radius: 50%;
 	box-shadow: -20px -20px 0 var(--first-color);
+  display: none;
+}
+
+@media screen and (min-width: 1224px){
+  .section_main{
+    width: calc(100% - var(--slidebar-width))
+  }
+  .section_main::before{
+    display: block;
+  }
+  .icon{
+    display: none;
+  }
+  
 }

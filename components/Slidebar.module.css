@@ -1,4 +1,12 @@
 /* SIDEBAR */
+.hide{
+	left: calc(-1 * var(--slidebar-width));
+}
+
+.display{
+	left: 0;
+}
+
 .bloc__UA{
 	width: 100%;
 	display: flex;
@@ -7,8 +15,7 @@
 	gap: .3rem;
 	margin: .1rem 0;
 	color: #fff;
-	padding: 1rem .9rem;
-	margin-bottom: 1rem;
+	padding: .5rem .9rem;
 	border-top: solid 1px #fff;
 	border-right: 0px;
 	border-radius: 10px;
@@ -36,16 +43,16 @@
 }
 
 .slidebar {
-	top: 0;
-	left: 0;
+	top: 5rem;
 	width: var(--slidebar-width);
 	background: var(--first-color);
 	z-index: var( --z-back);
 	font-family: var(--lato);
-	transition: .3s ease;
+	transition: .8s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
-	position: sticky;
+	position: absolute;
+	border-radius: 10px;
 }
 
 .slide_menu {
@@ -56,7 +63,6 @@
 .slide_menu li {
 	background: transparent;
 	margin-left: 6px;
-	margin-bottom: 1rem;
 	border-radius: 48px 0 0 48px;
 }
 
@@ -119,3 +125,13 @@
 	z-index: -1;
 }
 /* SIDEBAR */
+
+/* Pour les grands ecrans*/
+@media screen and (min-width: 1224px){
+	.slidebar {
+		left: 0;
+		top: 0;
+		border-radius: 0;
+		position: sticky;
+	}
+}

@@ -1,6 +1,7 @@
 :root {
   /* --hue-color: 245; */
-  --hue-color: 200;
+  /* --hue-color: 165; */
+  --hue-color: 165;
   --first-color: hsl(var(--hue-color), 60%, 33%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -21,7 +22,7 @@
   --h3-font-size: 1.125rem;
   --mormal-font-size: .938rem;
   --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --smaller-font-size: .50rem;
 
   /************ Font weight ***************/
   --font-bold: 800;

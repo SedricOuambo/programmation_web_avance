@@ -1,0 +1,26 @@
+.icon{
+    color: var(--first-color);
+    margin-top: 1.2rem;
+    font-size: var(--h1-font-size);
+    z-index: var( --z-fixed);
+    position: absolute;
+  }
+  
+  .icon:hover{
+    cursor: pointer;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .display{
+    display: block;
+  }
+
+  @media screen and (min-width: 1224px){
+    .icon{
+      display: none;
+    }
+  }
+  
