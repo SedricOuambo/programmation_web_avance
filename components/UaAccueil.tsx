@@ -3,7 +3,7 @@ import styles from './UaAccueil.module.css'
 export default function UaAccueil(props: any) {
     return <div className={styles.bloc}>
         <div className={styles.bloc_titre}>
-            <span>Unité d'Apprentissage {props.numero} : </span>
+            <span>Unité d&apos;Apprentissage {props.numero} : </span>
             <div>{props.titre}</div>
         </div>
         <div className={styles.bloc_objectifs}>
