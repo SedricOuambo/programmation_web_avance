@@ -2,14 +2,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import MonGrandBloc from "@/components/MonGrandBloc";
 import Slidebar from "@/components/Slidebar";
 import Header from "@/components/Header";
 import ArrowRight from "@/components/ArrowRight";
 import ArrowLeft from "@/components/ArrowLeft";
 import Footer from "@/components/Footer";
-import styles from './page.module.css'
-import { IndexProvider } from "@/components/IndexProvider";
-import { HideProvider } from "@/components/HideSliderProvider";
+import styles from './page.module.css';
+import { ModuleActifProvider } from "@/components/ModuleActifProvider";
+import { TitreModuleProvider } from "@/components/TitreModuleProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,20 +27,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + ' ' + styles.body}>
-        <IndexProvider>
-          <HideProvider>
+        <ModuleActifProvider>
+          <TitreModuleProvider>
             <Header />
             <main className={styles.main}>
-              <Slidebar />
-              <ArrowRight/>
-              <ArrowLeft/>
+              {/* <Slidebar /> */}
+              {/* <ArrowRight />
+            <ArrowLeft /> */}
               <section className={styles.section_main}>
-                {children}
+                <MonGrandBloc />
+                <div className={styles.children}>
+                  {children}
+                </div>
               </section>
             </main>
             <Footer />
-          </HideProvider>
-        </IndexProvider>
+          </TitreModuleProvider>
+        </ModuleActifProvider>
       </body>
     </html>
   );

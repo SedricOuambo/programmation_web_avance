@@ -1,37 +1,26 @@
 'use client'
 import styles from './Slidebar.module.css';
-import Image from 'next/image';
-import logo from '@/public/img/logo.webp';
-import Link from 'next/link';
 import BlocModule from './BlocModule';
-import { useIndex } from './IndexProvider'
-import {useHide} from './HideSliderProvider'
+import BlocUA from './BlocUA'
+
+import { useHide } from './HideSliderProvider'
 
 export default function Slidebar() {
-
-    const [activeIndex, setActiveIndex] = useIndex();
     const [hide, setHide] = useHide();
-    const handleClick = (index) => { setActiveIndex(index); }
 
-    return <section className={styles.slidebar +' '+ (hide === "true" ? styles.hide : styles.display)}>
+    return <section className={styles.slidebar + ' ' + (hide === "true" ? styles.hide : styles.display)}>
         <ul className={styles.slide_menu + ' ' + styles.top}>
             <li>
-                <Link href='/'
-                    onClick={() => handleClick("AC")}
-                    className={activeIndex === "AC" ? styles.active : ""}>
-                    <div className={styles.bloc__UA}>
-                        <div>Accueil </div>
-                        <span>Plan du cours</span>
-                    </div>
-                </Link>
-                <Link href='ua1'
-                    onClick={() => handleClick("UA1")}
-                    className={activeIndex === "UA1" ? styles.active : ""}>
-                    <div className={styles.bloc__UA}>
-                        <div>UA 01 : </div>
-                        <span>Application Web monopage</span>
-                    </div>
-                </Link>
+                <BlocUA
+                    chemin='/'
+                    titre='Accueil'
+                    libelle_titre='Plan du cours'
+                />
+                <BlocUA
+                    chemin='/ua1'
+                    titre='UA 01 :'
+                    libelle_titre='Application Web monopage'
+                />
                 <ul>
                     <BlocModule
                         lien_module="/module1"
@@ -57,14 +46,11 @@ export default function Slidebar() {
             </li>
 
             <li>
-                <Link href='ua2'
-                    onClick={() => handleClick("UA2")}
-                    className={activeIndex === "UA2" ? styles.active : ""}>
-                    <div className={styles.bloc__UA}>
-                        <div>UA 02 : </div>
-                        <span>Routage client et partage des données</span>
-                    </div>
-                </Link>
+                <BlocUA
+                    chemin='/ua2'
+                    titre='UA 02 :'
+                    libelle_titre='Routage client et partage des données'
+                />
                 <ul>
                     <BlocModule
                         lien_module="/module5"
@@ -93,14 +79,11 @@ export default function Slidebar() {
             </li>
 
             <li>
-                <Link href='ua3'
-                    onClick={() => handleClick("UA3")}
-                    className={activeIndex === "UA3" ? styles.active : ""}>
-                    <div className={styles.bloc__UA}>
-                        <div>UA 03 : </div>
-                        <span>Application Client/Serveur complexe</span>
-                    </div>
-                </Link>
+                <BlocUA
+                    chemin='/ua3'
+                    titre='UA 03 :'
+                    libelle_titre='Application Client/Serveur complexe'
+                />
                 <ul>
                     <BlocModule
                         lien_module="/module9"

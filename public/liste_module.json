@@ -1,0 +1,26 @@
+[
+    {
+        "chemin": "/module1",
+        "numero": 1,
+        "titre": "Création d'un projet",
+        "description": "Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+    },
+    {
+        "chemin": "/module2",
+        "numero": 2,
+        "titre": "Les composants et props",
+        "description": "Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+    },
+    {
+        "chemin": "/module3",
+        "numero": 3,
+        "titre": "Affichage conditionnel des données et affichage répétitif",
+        "description": "Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+    },
+    {
+        "chemin": "/module4",
+        "numero": 4,
+        "titre": "Partage des données entre composants",
+        "description": "Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+    }
+]

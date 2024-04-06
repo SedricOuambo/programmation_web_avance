@@ -1,18 +1,14 @@
 'use client'
 import styles from './NavBar.module.css';
-import { FaResearchgate } from 'react-icons/fa';
-import { useIndex } from './IndexProvider'
+import Link from 'next/link';
 
 export default function NavBar() {
-    const [activeIndex, setActiveIndex] = useIndex();
-    const handleClick = (index) => { setActiveIndex(index); }
 
-    return <nav className={styles.navbar}
-        onClick={() => handleClick('AC')}>
+    return <nav className={styles.navbar}>
 
-        <a href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo}>
             Programmation Web Avancée
-        </a>
+        </Link>
 
         <div className={styles.bloc_droit}>
             <div>

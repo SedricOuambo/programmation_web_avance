@@ -8,19 +8,20 @@
 
 .numero{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: .1rem;
-    padding: .8rem;
+    align-items: center;
     background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
     color: #fff;
     border-radius: 50%;
     font-weight: var(--font-medium-bold);
-    font-size: var(--smaller-font-size);
+    font-size: var(--small-font-size);
+    width: 2rem;
+    height: 2rem;
 }
 
-.nombre{
+.module_numero{
+    display: flex;
+    gap: .5rem;
     font-size: var(--small-font-size);
 }
 
@@ -44,14 +45,9 @@
     }
 
     .numero{
-        gap: .3rem;
-        padding: 1rem;
-        border-radius: 50%;
-        font-size: var(--small-font-size);
-    }
-
-    .nombre{
-        font-size: var(--h3-font-size);
+        width: 4rem;
+        height: 4rem;
+        font-size: var(--h1-font-size);
     }
 
     .bloc{

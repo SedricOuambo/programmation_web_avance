@@ -13,7 +13,10 @@
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-  --grey: #eee;
+  --grey2: #eee;
+  --grey: #fafafa;
+  --light: #FFF;
+  --dark: #000;
 
   /* Les differentes tailles pour les petits ecrans */
   --big-font-size: 2rem;
@@ -31,6 +34,9 @@
 
   /************ Largeur du slidebar *************/
   --slidebar-width: 300px;
+
+  /**************  Lageur max pages************/
+  --page-max-width: 2024px;
 
   /************ hauteur du navBar *************/
   --navbar-height: 4rem;
@@ -90,6 +96,5 @@ html {
 }
 
 body {
-  background: var(--grey);
-  overflow-x: hidden;
+  background: var(--light);
 }

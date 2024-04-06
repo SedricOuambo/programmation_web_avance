@@ -1,0 +1,14 @@
+.containeur{
+    position: sticky;
+    top: 1rem;
+}
+
+.sub_containeur{
+    position: relative;
+}
+
+.mon_sous_bloc{
+    position: absolute;
+    top: 4.5rem;
+    display: block;
+}

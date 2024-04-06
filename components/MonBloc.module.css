@@ -1,0 +1,120 @@
+.bloc{ 
+    position: sticky;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--page-max-width);
+    background-color: var(--grey);
+    min-height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 35px;
+    padding: .5em .5rem;
+    border: 1px solid var(--text-color-light);
+}
+
+.sous_bloc{
+    width: 22rem;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: var(--light);
+    border: 1px solid var(--text-color-light);
+    position: absolute;
+    top: 3.5rem;
+    display: none;
+}
+
+.elements{
+    display: grid;
+    grid-template-columns: 20rem;
+}
+
+.display_sous_bloc{
+    display: block;
+}
+
+.titre_module{
+    font-weight: 600;
+}
+
+.blocGauche,
+.blocDroit{
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+}
+
+.separateur{
+    height: 1.5rem;
+    width: 0.1rem;
+    background-color: var(--first-color);
+    margin: 0 .4rem;
+}
+
+.arrowUp, 
+.menuIcon{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    padding: .2rem;
+    color: var(--first-color);
+    font-weight: bolder;
+}
+
+.arrowUp:hover,
+.menuIcon:hover{
+    background-color: var(--first-color);
+    border-radius: 50%;
+    color: var(--light);
+    cursor: pointer;
+}
+
+/* Pour les petits ecrans*/
+@media screen and (max-width: 400px){
+    .sous_bloc{
+        width: 20rem;
+    }
+
+    .elements{
+        grid-template-columns: 18rem;
+    }
+}
+
+/* Pour les grands ecrans*/
+@media screen and (min-width: 768px){
+    .bloc{
+        min-height: 4rem;
+        margin-bottom: 1.5rem;
+        padding: .5rem 1.5rem;
+    }
+
+    .sous_bloc{
+        top: 5rem;
+    }
+    
+    
+    .separateur{
+        height: 2rem;
+        width: 0.1rem;
+        background-color: var(--first-color);
+        margin: 0 .8rem;
+    }
+    
+    .arrowUp, 
+    .menuIcon{
+        padding: .4rem;
+    }
+
+    .menuIcon{
+        font-size: var(--h2-font-size);
+    }
+
+    .sous_bloc{
+        width: 42rem;
+    }
+
+    .elements{
+        grid-template-columns: 20rem 20rem;
+    }
+}

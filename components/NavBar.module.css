@@ -10,11 +10,9 @@
 	justify-content: space-between;
 	grid-gap: 24px;
 	font-family: var(--lato);
-	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: var(--z-fixed);
 }
 
 .logo{
@@ -27,7 +25,7 @@
 }
 
 .navbar a {
-	color: var(--dark);
+	color: var(--light);
 }
 .navbar .bx{
 	cursor: pointer;

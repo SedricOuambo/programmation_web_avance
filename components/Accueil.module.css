@@ -1,19 +1,11 @@
 .contenu_accueil{
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    margin-left: .5rem;
-    margin-top: 4rem;
     margin-right: .5rem;
-    border-radius: 10px;
     padding: 1rem;
+    width: 100%;
 }
 
 
 @media screen and (min-width : 568px) {
-    .contenu_accueil{
-        padding: 3rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
 }

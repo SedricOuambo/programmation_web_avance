@@ -1,0 +1,54 @@
+/* Définition de l'animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    font-size: var(--small-font-size);
+    padding: .5rem;
+    margin-bottom: .5rem;
+    animation: fadeIn 2.3s ease forwards;
+    /* Applique l'animation */
+    opacity: 0;
+    /* Commence avec une opacité de 0 */
+}
+
+.container:hover {
+    background-color: var(--grey2);
+    border-radius: 10px;
+
+    .numero {
+        background-color: var(--first-color-alt);
+        color: var(--light);
+    }
+}
+
+.numero {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--first-color-lighter);
+    color: var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    margin-right: .5rem;
+}
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    color: var(--dark);
+}
+
+.titre div {
+    font-weight: 600;
+}
