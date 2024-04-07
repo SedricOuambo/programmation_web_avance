@@ -15,7 +15,8 @@
 }
 
 .sous_bloc{
-    width: 22rem;
+    width: 23rem;
+    height: 25rem;
     border-radius: 15px;
     padding: 1rem;
     background-color: var(--light);
@@ -23,6 +24,7 @@
     position: absolute;
     top: 3.7rem;
     display: none;
+    overflow: auto;
 }
 
 .bloc_actif span{
@@ -124,7 +126,7 @@
     }
 
     .sous_bloc{
-        width: 42rem;
+        width: 44rem;
     }
 
     .elements{
