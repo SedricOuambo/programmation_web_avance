@@ -30,9 +30,9 @@ export default function MonBloc() {
                     width={30}
                     height={20}
                 />
-                <div>
+                <div className={styles.bloc_actif}>
                     <div className={styles.titre_module}>Module {moduleActif}</div>
-                    <div>{titreModule}</div>
+                    <span>{titreModule}</span>
                 </div>
             </div>
             <div className={styles.blocDroit}>

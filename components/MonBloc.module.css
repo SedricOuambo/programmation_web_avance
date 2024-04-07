@@ -7,7 +7,7 @@
     width: 100%;
     max-width: var(--page-max-width);
     background-color: var(--grey);
-    min-height: 3rem;
+    height: 3rem;
     margin-bottom: 1rem;
     border-radius: 35px;
     padding: .5em .5rem;
@@ -21,8 +21,12 @@
     background-color: var(--light);
     border: 1px solid var(--text-color-light);
     position: absolute;
-    top: 3.5rem;
+    top: 3.7rem;
     display: none;
+}
+
+.bloc_actif span{
+    font-size: var(--smaller-font-size);
 }
 
 .elements{
@@ -81,16 +85,25 @@
     }
 }
 
+@media screen and (min-width: 400px){
+    .bloc_actif span{
+        font-size: var(--small-font-size);
+    }
+}
+
 /* Pour les grands ecrans*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 700px){
+    .bloc_actif span{
+        font-size: var(--h3-font-size);
+    }
     .bloc{
-        min-height: 4rem;
+        height: 4rem;
         margin-bottom: 1.5rem;
         padding: .5rem 1.5rem;
     }
 
     .sous_bloc{
-        top: 5rem;
+        top: 4.7rem;
     }
     
     
