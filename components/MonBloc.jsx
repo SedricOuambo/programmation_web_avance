@@ -8,6 +8,7 @@ import MonSousBloc from './MonSousBloc';
 import liste_modules from '@/public/liste_module.json';
 import {useModuleActif} from './ModuleActifProvider'
 import {useTitreModule} from './TitreModuleProvider'
+import Link from 'next/link';
 
 export default function MonBloc() {
     const [bloc, setBloc] = useState('NotActive');
@@ -37,7 +38,7 @@ export default function MonBloc() {
             </div>
             <div className={styles.blocDroit}>
                 <div className={styles.separateur}></div>
-                <div className={styles.arrowUp}><FaArrowUp /></div>
+                <Link href='#logo'><div className={styles.arrowUp}><FaArrowUp /></div></Link>
             </div>
         </div>
         <div className={styles.sous_bloc + ' ' + (bloc === 'Active' ? styles.display_sous_bloc : "")}>

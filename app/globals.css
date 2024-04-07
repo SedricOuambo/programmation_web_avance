@@ -1,5 +1,4 @@
 :root {
-  /* --hue-color: 245; */
   --hue-color: 235;
   /* --hue-color: 165; */
   --first-color: hsl(var(--hue-color), 60%, 33%);
@@ -17,6 +16,10 @@
   --grey: #fafafa;
   --light: #FFF;
   --dark: #000;
+  --couleur1:hsl(295, 60%, 33%);
+  --couleur2:hsl(165, 60%, 33%);
+  --couleur3:hsl(235, 60%, 33%);
+  --couleur4:hsl(205, 60%, 33%);
 
   /* Les differentes tailles pour les petits ecrans */
   --big-font-size: 2rem;
