@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/NavBar.jsx", "components/Slidebar.jsx", "components/BlocModule.jsx", "components/IndexProvider.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/NavBar.jsx", "components/Slidebar.jsx", "components/BlocModule.jsx", "components/IndexProvider.jsx", "components/MonSousBloc.jsx", "components/MonBloc.jsx", "components/MonBloc.jsx"],
   "exclude": ["node_modules"]
 }

@@ -14,9 +14,9 @@
     color: #fff;
     border-radius: 50%;
     font-weight: var(--font-medium-bold);
-    font-size: var(--small-font-size);
-    width: 2rem;
-    height: 2rem;
+    font-size: var(--smaller-font-size);
+    width: 1.5rem;
+    height: 1rem;
 }
 
 .module_numero{
