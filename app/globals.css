@@ -39,7 +39,7 @@
   --slidebar-width: 300px;
 
   /**************  Lageur max pages************/
-  --page-max-width: 2024px;
+  --page-max-width: 1024px;
 
   /************ hauteur du navBar *************/
   --navbar-height: 4rem;
@@ -88,6 +88,7 @@ body.dark {
 
 a {
   text-decoration: none;
+  color: var(--dark);
 }
 
 li {

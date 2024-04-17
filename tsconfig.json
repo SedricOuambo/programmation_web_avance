@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/NavBar.jsx", "components/Slidebar.jsx", "components/BlocModule.jsx", "components/IndexProvider.jsx", "components/MonSousBloc.jsx", "components/MonBloc.jsx", "components/MonBloc.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/NavBar.jsx", "components/Slidebar.jsx", "components/BlocModule.jsx", "components/IndexProvider.jsx", "components/MonSousBloc.jsx", "components/MonBloc.jsx", "components/MonBloc.jsx", "app/module1/page.jsx", "components/Accueil.jsx", "components/ModuleAccueil.jsx"],
   "exclude": ["node_modules"]
 }

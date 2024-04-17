@@ -5,10 +5,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 const TitreModuleContext = createContext();
 
 export function TitreModuleProvider({children}){
-    const [titreModule, setTitreModule] = useState('Accueil');
+    const [titreModule, setTitreModule] = useState('Plan du cours');
 
     useEffect(() => {
-        setTitreModule(localStorage.getItem('titreModule') || 'Accueil');
+        setTitreModule(localStorage.getItem('titreModule') || 'Plan du cours');
     }, [setTitreModule]);
 
     return <TitreModuleContext.Provider value={[titreModule, setTitreModule]}>

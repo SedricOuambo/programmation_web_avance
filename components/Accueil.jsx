@@ -12,7 +12,7 @@ export default function Accueil() {
         />
         <ModuleAcueil
             numero="1"
-            titre="Création d'un projet"
+            titre="Créer un projet React avec Next.js"
             description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
         />
         <ModuleAcueil
@@ -22,7 +22,7 @@ export default function Accueil() {
         />
         <ModuleAcueil
             numero="3"
-            titre="Affichage conditionnel des données et affichage répétitif"
+            titre="Affichage conditionnel des données"
             description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
         />
         <ModuleAcueil
@@ -46,7 +46,7 @@ export default function Accueil() {
         />
         <ModuleAcueil
             numero="6"
-            titre="Métadonnées et optimisation pour les engins de recherche (SEO)"
+            titre="Métadonnées et SEO"
             description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
         />
         <ModuleAcueil

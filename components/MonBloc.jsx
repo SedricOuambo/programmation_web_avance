@@ -5,10 +5,10 @@ import Image from 'next/image';
 import logo2 from '@/public/img/logo2.webp';
 import { useState } from 'react';
 import MonSousBloc from './MonSousBloc';
-import liste_modules from '@/public/liste_module.json';
-import {useModuleActif} from './ModuleActifProvider'
-import {useTitreModule} from './TitreModuleProvider'
+import { useModuleActif } from './ModuleActifProvider';
+import { useTitreModule } from './TitreModuleProvider';
 import Link from 'next/link';
+import { IoHome } from "react-icons/io5";
 
 export default function MonBloc() {
     const [bloc, setBloc] = useState('NotActive');
@@ -37,6 +37,7 @@ export default function MonBloc() {
                 </div>
             </div>
             <div className={styles.blocDroit}>
+                <Link href='/'><IoHome className={styles.home}/></Link>
                 <div className={styles.separateur}></div>
                 <Link href='#logo'><div className={styles.arrowUp}><FaArrowUp /></div></Link>
             </div>
@@ -44,9 +45,14 @@ export default function MonBloc() {
         <div className={styles.sous_bloc + ' ' + (bloc === 'Active' ? styles.display_sous_bloc : "")}>
             <div className={styles.elements}>
                 <MonSousBloc
+                    chemin="/"
+                    numero="0"
+                    titre="Plan du cours"
+                />
+                <MonSousBloc
                     chemin="/module1"
                     numero="1"
-                    titre="Création d'un projet"
+                    titre="Créer un projet React avec Next.js"
                 />
                 <MonSousBloc
                     chemin="/module2"
@@ -56,7 +62,7 @@ export default function MonBloc() {
                 <MonSousBloc
                     chemin="/module3"
                     numero="3"
-                    titre="Affichage conditionnel et répétitif"
+                    titre="Affichage conditionnel des données"
                 />
                 <MonSousBloc
                     chemin="/module4"
