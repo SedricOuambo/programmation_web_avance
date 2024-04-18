@@ -1,27 +1,29 @@
+'use client'
 import styles from './MonBloc.module.css'
 import { TfiMenuAlt } from "react-icons/tfi";
 import { FaArrowUp } from "react-icons/fa6";
+import { useModuleActif } from './Provider/ModuleActifProvider';
+import { useTitreModule } from './Provider/TitreModuleProvider';
+import { useMenuActif } from './Provider/MenuActifProvider';
+import { IoHome } from "react-icons/io5";
 import Image from 'next/image';
 import logo2 from '@/public/img/logo2.webp';
-import { useState } from 'react';
 import MonSousBloc from './MonSousBloc';
-import { useModuleActif } from './ModuleActifProvider';
-import { useTitreModule } from './TitreModuleProvider';
 import Link from 'next/link';
-import { IoHome } from "react-icons/io5";
 
 export default function MonBloc() {
-    const [bloc, setBloc] = useState('NotActive');
-    const handleClick = () => {
-        bloc === 'Active' ? setBloc('NotActive') : setBloc('Active');
-    }
+    const [menu, setMenu] = useMenuActif();
     const [moduleActif, setModuleActif] = useModuleActif();
     const [titreModule, setTitreModule] = useTitreModule();
+    const handleClick = () => {
+        menu === 'Active' ? setMenu('NotActive') : setMenu('Active');
+    }
 
     return <div>
         <div className={styles.bloc}>
             <div className={styles.blocGauche}>
-                <div className={styles.menuIcon} onClick={handleClick}>
+                <div className={styles.menuIcon}
+                    onClick={handleClick}>
                     <TfiMenuAlt />
                 </div>
                 <div className={styles.separateur}></div>
@@ -37,12 +39,19 @@ export default function MonBloc() {
                 </div>
             </div>
             <div className={styles.blocDroit}>
-                <Link href='/'><IoHome className={styles.home}/></Link>
+                <Link href='/'
+                onClick={() => {
+                    setModuleActif(0);
+                    setTitreModule('Plan du cours');
+                    setMenu('NotActive');
+                }}>
+                    <IoHome className={styles.home}/>
+                </Link>
                 <div className={styles.separateur}></div>
                 <Link href='#logo'><div className={styles.arrowUp}><FaArrowUp /></div></Link>
             </div>
         </div>
-        <div className={styles.sous_bloc + ' ' + (bloc === 'Active' ? styles.display_sous_bloc : "")}>
+        <div className={styles.sous_bloc + ' ' + (menu === 'Active' ? styles.display_sous_bloc : "")}>
             <div className={styles.elements}>
                 <MonSousBloc
                     chemin="/"

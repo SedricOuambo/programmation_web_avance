@@ -1,5 +1,8 @@
 'use client'
 import styles from './NavBar.module.css';
+import { useModuleActif } from './Provider/ModuleActifProvider';
+import { useTitreModule } from './Provider/TitreModuleProvider';
+import { useMenuActif } from './Provider/MenuActifProvider';
 import Link from 'next/link';
 import { IoColorFill } from "react-icons/io5";
 import React, { useState, useEffect } from 'react';
@@ -24,30 +27,30 @@ export default function NavBar() {
     };
 
     //Gestionnaire du clic sur le bouton pour changer la couleur
-    const handleClicActif = () =>{
+    const handleClicActif = () => {
         actif === 'false' ? setActif('true') : setActif('false')
     }
+    const [menu, setMenu] = useMenuActif();
+    const [moduleActif, setModuleActif] = useModuleActif();
+    const [titreModule, setTitreModule] = useTitreModule();
 
     return <nav className={styles.navbar}>
 
-        <Link href="/" className={styles.logo} id='logo'>
+        <Link href="/" className={styles.logo} id='logo'
+            onClick={() => {
+                setModuleActif(0);
+                setTitreModule('Plan du cours');
+                setMenu('NotActive');
+            }}>
             Programmation Web Avancée
         </Link>
 
         <div className={styles.bloc_droit}>
-            {/* <div>
-                <form action="#" className={styles.form}>
-                    <input type="search" placeholder="Rechercher..." />
-                    <button type="submit" className={styles.search_btn}>
-                        OK
-                    </button>
-                </form>
-            </div> */}
             <div>
                 <div className={styles.colors}
                     onClick={handleClicActif}><IoColorFill />
                 </div>
-                <div className={styles.bloc_couleurs +' '+ 
+                <div className={styles.bloc_couleurs + ' ' +
                     (actif === 'true' ? styles.active : "")}>
                     <span className={styles.couleur1}
                         onClick={() => handleChangeColor('295')}>couleur1</span>

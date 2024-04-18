@@ -1,3 +1,4 @@
+'use client'
 import styles from './Accueil.module.css';
 import ModuleAcueil from './ModuleAccueil';
 import UaAccueil from './UaAccueil';
