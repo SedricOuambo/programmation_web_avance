@@ -43,7 +43,7 @@ export default function InstallPrompt() {
             <div>
                 <span onClick={handleInstall}>
                     <HiDownload />
-                    Cliquez pour installer l'application!
+                    Cliquez pour installer l&apos;application!
                 </span>
             </div>
             <span onClick={handleClose}>
