@@ -38,7 +38,7 @@ export default function InstallPrompt() {
         }
     }
 
-    return installPrompt && (currentDate - installDate) >= 300 &&
+    return installPrompt && (currentDate - installDate) >= 86400 &&
         <div className={styles.banniere}>
             <div>
                 <span onClick={handleInstall}>
