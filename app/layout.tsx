@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
     images: ['/react.png']
   },
-  manifest: '/manifest.webmanifest'
+  manifest: 'https://sedricouambo.github.io/programmation_web_avancee/manifest.webmanifest'
 };
 
 export default function RootLayout({
