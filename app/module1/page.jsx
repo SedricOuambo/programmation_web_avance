@@ -9,7 +9,7 @@ export const metadata = {
         description: 'Creer un projet React avec Next.js',
         images: ['/react.png']
     },
-    manifest: '/manifest.webmanifest'
+    manifest: './manifest.webmanifest'
 };
 
 export default function Module1() {
