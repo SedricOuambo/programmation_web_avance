@@ -8,7 +8,7 @@ export default function UaAccueil(props: any) {
         </div>
         <div className={styles.bloc_objectifs}>
             <span>Compétences visées :</span>
-            À la fin de cette Unité d'Apprentissage, l'étudiant qui réussit sera en mesure de:
+            À la fin de cette Unité d&apos;Apprentissage, l&apos;étudiant qui réussit sera en mesure de:
             <div> 
                 <nav>-{'>'}</nav>
                 {props.objectif1}
