@@ -1,5 +1,6 @@
-import BlocObjectifs from '@/components/BlocObjectifs'
-import ModuleAcueilGrand from "@/components/ModuleAccueilGrand"
+import BlocObjectifs from '@/components/BlocObjectifs';
+import ModuleAcueilGrand from "@/components/ModuleAccueilGrand";
+import ContenuModule1 from '@/components/ContenuModule1';
 
 export const metadata = {
     title: 'Module1 | Web Avancée',
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default function Module1() {
     const tabObjectifs = [
-        'Notion de framework',
+        'Notion de framework web',
         'Environnement de développement',
         'Installation des outils et logiciels',
         'Création d\'un projet React avec Next.js',
@@ -33,5 +34,6 @@ export default function Module1() {
         <BlocObjectifs
             listeObjectifs={tabObjectifs}
         />
+        <ContenuModule1/>
     </>
 }

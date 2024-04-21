@@ -1,0 +1,30 @@
+.container{
+    padding: 1rem;
+    font-size: var(--h3-font-size);
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    border: 3px solid var(--first-color-second);
+    font-weight: 300;
+    position: relative;
+    z-index: var(--z-back);
+}
+
+.terminal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--first-color-alt);
+    color: var(--light);
+    font-size: var(--small-font-size);
+    padding: .1rem .5rem;
+    font-weight: 500;
+} 
+
+@media screen and (min-width: 768px){
+    .container{
+        margin: 0 1.5rem;
+        margin-bottom: 1rem;
+    }
+}

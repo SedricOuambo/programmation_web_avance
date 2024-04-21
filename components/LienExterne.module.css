@@ -1,0 +1,15 @@
+.div{
+    font-size: var(--h3-font-size);
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px){
+    .div{
+        margin: 0 1.5rem;
+        margin-bottom: 1rem;
+    }
+}

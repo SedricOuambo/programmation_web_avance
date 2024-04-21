@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from './BlocObjectifs.module.css'
-import { GoGoal } from "react-icons/go";
+import { FaHandPointRight } from "react-icons/fa";
 
 export default function BlocObjectifs(props) {
     return <div className={styles.container}>
@@ -12,7 +12,7 @@ export default function BlocObjectifs(props) {
             {props.listeObjectifs.map((objectif, index) => (
                 <Link key={index} href={'#' + index} className={styles.lien}>
                     <nav>
-                        <GoGoal className={styles.icone} />
+                        <FaHandPointRight className={styles.icone} />
                         {objectif}
                     </nav>
                     <div className={styles.separateur}></div>

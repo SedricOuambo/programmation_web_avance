@@ -11,7 +11,7 @@
 }
 
 .entete_objectifs div{
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     font-weight: 700;
 }
 
@@ -35,14 +35,14 @@
 }
 
 .icone{
-    color: var(--first-color-second);
+    color: var(--first-color-alt);
 }
 
 .lien:hover{
     background-color: var(--grey2);
     border-radius: 10px;
     .icone{
-        color: var(--first-color);
+        color: var(--first-color-second);
     }
 }
 
