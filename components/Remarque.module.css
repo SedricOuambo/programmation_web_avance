@@ -7,10 +7,23 @@
     text-align: justify;
     margin: 0 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .type{
     font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--first-color-alt);
+    color: var(--light);
+    font-size: var(--small-font-size);
+    padding: .1rem .5rem;
+    font-weight: 500;
+}
+
+.contenu{
+    margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px){

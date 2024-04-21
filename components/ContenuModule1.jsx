@@ -124,7 +124,7 @@ export default function ContenuModule1() {
             description='Installer Node.js'
         />
         <Remarque
-            type='Attention!'
+            type='Attention !'
             contenu="Au cas où Node.js serait déjà installée dans votre ordinateur, vous devez vous rassurer d'avoir la version Node.js 18.17.0 ou plus. En effet, au moment où ce contenu est produit, Next.js a besoin de Node.js 18.17.0 ou plus pour fonctionner correctement. De plus, il est conseillé de télécharger la version Current et non la version LTS de Node.js"
         />
 
@@ -150,7 +150,7 @@ export default function ContenuModule1() {
         />
 
         <Remarque
-            type='Attention!'
+            type='Attention !'
             contenu="Ne pas confondre Visual Studio et Visual Studio Code. Ces deux logiciels sont développés par Microsoft mais sont différents. Ils ont d'ailleurs des logos différents."
         />
 

@@ -1,6 +1,7 @@
 .containeur{
     position: sticky;
     top: 1rem;
+    z-index: var(--z-fixed);
 }
 
 .sub_containeur{
