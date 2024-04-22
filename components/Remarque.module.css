@@ -2,8 +2,7 @@
     background-color: var(--first-color-lighter);
     padding: 1rem;
     border-radius: 15px;
-    font-size: var(--h3-font-size);
-    line-height: 1.6;
+    line-height: var(--interligne);
     text-align: justify;
     margin: 0 1rem;
     margin-bottom: 1rem;
@@ -17,13 +16,17 @@
     left: 0;
     background-color: var(--first-color-alt);
     color: var(--light);
-    font-size: var(--small-font-size);
     padding: .1rem .5rem;
     font-weight: 500;
 }
 
+.type,
 .contenu{
-    margin-top: 1rem;
+    font-size: var( --normal-font-size);
+}
+
+.contenu{
+    margin-top: 1.8rem;
 }
 
 @media screen and (min-width: 768px){

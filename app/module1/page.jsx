@@ -3,10 +3,10 @@ import ModuleAcueilGrand from "@/components/ModuleAccueilGrand";
 import ContenuModule1 from '@/components/ContenuModule1';
 
 export const metadata = {
-    title: 'Module1 | Web Avancée',
+    title: 'Module1',
     description: 'Creer un projet React avec Next.js',
     openGraph: {
-        title: 'Module1 | Web Avancée',
+        title: 'Module1',
         description: 'Creer un projet React avec Next.js',
         images: ['/react.png']
     },
@@ -17,7 +17,7 @@ export default function Module1() {
     const tabObjectifs = [
         'Notion de framework web',
         'Environnement de développement',
-        'Installation des outils et logiciels',
+        'Technologies utilisées par Next.js',
         'Création d\'un projet React avec Next.js',
         'Structure d\'un projet React avec Next.js',
         'Quelques astuces utiles',

@@ -13,10 +13,10 @@ import { InstalledDateProvider } from '@/components/Provider/InstalledDateProvid
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Accueil | Web Avancée',
+  title: 'Accueil',
   description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
   openGraph: {
-    title: 'Accueil | Web Avancée',
+    title: 'Accueil',
     description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
     images: ['/react.png']
   },

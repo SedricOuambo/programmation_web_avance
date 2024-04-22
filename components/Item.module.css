@@ -1,7 +1,7 @@
 .div{
     gap: 1rem;
-    font-size: var(--h3-font-size);
-    line-height: 1.6;
+    font-size: var(--normal-font-size);
+    line-height: var(--interligne);
     text-align: justify;
     margin: 0 1rem;
     margin-bottom: .5rem;

@@ -15,6 +15,10 @@
     font-weight: 700;
 }
 
+.entete_objectifs span{
+    font-size: var(--normal-font-size);
+}
+
 .contenu_objectifs{
     display: flex;
     flex-direction: column;
@@ -31,7 +35,7 @@
     gap: 1rem;
     align-items: center;
     padding: .7rem 0.5rem;
-    font-size: var(--h3-font-size);
+    font-size: var(--normal-font-size);
 }
 
 .icone{

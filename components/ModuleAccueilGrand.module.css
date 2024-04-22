@@ -14,7 +14,8 @@
 }
 
 .description{
-    line-height: 1.6;
+    line-height: var(--interligne);
+    font-size: var(--normal-font-size);
     text-align: justify;
     margin-top: 1rem;
 }
