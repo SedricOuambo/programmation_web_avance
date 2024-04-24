@@ -42,7 +42,7 @@ export default function NavBar() {
                 setTitreModule('Plan du cours');
                 setMenu('NotActive');
             }}>
-            Programmation Web Avancée
+            Programmation Web Avancé
         </Link>
 
         <div className={styles.bloc_droit}>
