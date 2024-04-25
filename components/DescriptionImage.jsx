@@ -13,6 +13,7 @@ export default function DescriptionImage(props) {
                 src={'./img/img_modules/'+props.url}
                 width={350}
                 height={544}
+                alt={props.url}
             />
         </div>
     </div>
