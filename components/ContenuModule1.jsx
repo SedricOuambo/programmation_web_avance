@@ -450,15 +450,18 @@ body.dark {
         <Titre2 title="fichier '/app/globals.css'" />
         <CodeBlock chemin='/app/globals.css' contenu={globals_css} langage='css' />
         <DownloadLink
-        url='./css/globals.css'
-        item='globals.css complet'
+            url='./css/globals.css'
+            item='globals.css complet'
         />
         <Remarque
             type='Remarque'
             contenu="Il suffit d'enregistrer les modifications et l'application affichera 'Soyez les bienvenus sur biblio-app' au centre de la page."
         />
-        <Titre1 title='Présentation du projet' index='6'/>
-        <Titre1 title='Travail à faire' index='7'/>
+        <Remarque
+            type='Travail à faire'
+            contenu="La dernière chose à faire sera de changer les extensions des fichiers layout.js et page.js en .jsx, pour des raisons que nous avons évoquées plus haut." />
+        <Titre1 title='Présentation du projet' index='6' />
+        <Titre1 title='Travail à faire' index='7' />
         {/* // #endregion Configurations de base pour notre projet */}
     </>
 }
