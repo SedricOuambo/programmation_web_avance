@@ -1,29 +1,27 @@
-const {
-    PHASE_DEVELOPMENT_SERVER,
-    PHASE_PRODUCTION_BUILD,
-} = require("next/constants");
+// @ts-check
+/** @type {import("next").NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
+    // next.js config
+    images: {
+        unoptimized: true
+    },
+    output: 'export'
+};
 
-/** @type {(phase: string, defaultConfig: import("next").NextConfig) => Promise<import("next").NextConfig>} */
-module.exports = async (phase) => {
-    /** @type {import("next").NextConfig} */
-    const nextConfig = {
-        images: {
-            unoptimized: true
-        },
-        output: 'export'
-    };
+// You may want to use a more robust revision to cache
+// files more efficiently.
+// A viable option is `git rev-parse HEAD`.
+const revision = crypto.randomUUID();
 
-    if (phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD) {
-        const withSerwist = (await import("@serwist/next")).default({
-            // Note: This is only an example. If you use Pages Router,
-            // use something else that works, such as "service-worker/index.ts".
-            swSrc: "app/sw.ts",
-            swDest: "public/sw.js",
-        });
-        return withSerwist(nextConfig);
-    }
-
-    return nextConfig;
+module.exports = async () => {
+    const withSerwist = (await import("@serwist/next")).default({
+        cacheOnNavigation: true,
+        swSrc: "app/sw.ts",
+        swDest: "public/sw.js",
+        additionalPrecacheEntries: [{ url: "/~offline", revision }],
+    });
+    return withSerwist(nextConfig);
 };
 
 
