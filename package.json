@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@serwist/next": "^9.0.2",
     "next": "14.1.4",
     "prismjs": "^1.29.0",
     "react": "^18",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "serwist": "^9.0.2",
     "typescript": "^5"
   }
 }
