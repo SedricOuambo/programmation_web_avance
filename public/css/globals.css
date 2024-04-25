@@ -1,8 +1,5 @@
-/* Inclure un thème de PrismJS */
-@import 'prismjs/themes/prism.css';
 :root {
-  --hue-color: 235;
-  /* --hue-color: 165; */
+  --hue-color: 165;
   --first-color: hsl(var(--hue-color), 60%, 33%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -91,7 +88,6 @@ body.dark {
 
 a {
   text-decoration: none;
-  color: var(--dark);
 }
 
 li {

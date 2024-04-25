@@ -20,7 +20,7 @@ export default function Module1() {
         'Technologies utilisées par Next.js',
         'Création d\'un projet React avec Next.js',
         'Structure d\'un projet React avec Next.js',
-        'Quelques astuces utiles',
+        'Configurations de base pour notre projet',
         'Présentation du projet',
         'Travail à faire',
     ]

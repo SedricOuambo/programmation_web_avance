@@ -6,12 +6,87 @@ import Paragraphe from '@/components/Paragraphe'
 import Item from '@/components/Item'
 import Remarque from '@/components/Remarque'
 import LienExterne from '@/components/LienExterne'
-import Terminal from '@/components/Terminal'
+import CodeBlock from '@/components/CodeBlock'
 import { SiVisualstudio } from "react-icons/si";
 import { SiVisualstudiocode } from "react-icons/si";
 import DescriptionProjet from '@/components/DescriptionProjet';
+import DescriptionImage from '@/components/DescriptionImage';
+import DownloadLink from '@/components/DownloadLink';
 
 export default function ContenuModule1() {
+    const layout = `
+import { Inter } from "next/font/google";
+import "./globals.css";
+const inter = Inter({ subsets: ["latin"] });
+export const metadata = {
+    title: "Biblio-app",
+    description: "Demo Cours Programmation web avancé",
+};
+export default function RootLayout({ children }) {
+    return (
+        <html lang="en">
+        <body className={inter.className}>{children}</body>
+        </html>
+    );
+}
+`;
+
+    const page = `
+import Image from "next/image";
+import styles from "./page.module.css";
+export default function Home() {
+    return (
+        <main className={styles.main}>
+        <div className={styles.welcome}>
+            Soyez la bienvenue sur biblio-app
+        </div>
+        </main>
+    );
+}
+`;
+
+    const page_module = `
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem;
+    min-height: 100vh;
+    color: var(--first-color);
+    font-size: var(--big-font-size);
+  }
+`;
+
+    const globals_css = `
+:root {
+    --hue-color: 165;
+    --first-color: hsl(var(--hue-color), 60%, 33%);
+    /* Les differentes tailles pour les petits ecrans */
+    --big-font-size: 2rem;
+    /************ Font weight ***************/
+    --font-bold: 800;
+    /******** Les differentes marges ***************/
+    --mb-1: 1rem;
+    /****** z index  *****/
+    --z-fixed: 1000;
+}
+/****** Les tailles pour les grands ecrans *************/
+@media screen and (min-width: 968px) {
+:root {
+    --big-font-size: 3rem;
+}
+}
+body.dark {
+    --first-color: #0C0C1E;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+`;
+
     return <>
         <Divider />
         {/* #region Notion de Framework */}
@@ -108,7 +183,7 @@ export default function ContenuModule1() {
             title='Node.js'
         />
         <Paragraphe
-            contenu="Le premier et l'indispensable outil à installer sera Node.js. C'est un environnement d'exécution JavaScript open source, permettant d'exécuter du code JavaScript dans un terminal."
+            contenu="Le premier et l'indispensable outil à installer sera Node.js. C'est un environnement d'exécution JavaScript open source, permettant d'exécuter du code JavaScript dans un CodeBlock."
         />
         <LienExterne
             url='https://nodejs.org/en/download/current'
@@ -119,10 +194,13 @@ export default function ContenuModule1() {
             contenu="Au cas où Node.js serait déjà installée dans votre ordinateur, vous devez vous rassurer d'avoir la version Node.js 18.17.0 ou plus. En effet, au moment où ce contenu est produit, Next.js a besoin de Node.js 18.17.0 ou plus pour fonctionner correctement. De plus, il est conseillé de télécharger la version Current et non la version LTS de Node.js"
         />
         <Paragraphe
-            contenu="Pour savoir si Node.js est déjà installée et aussi savoir sa version, vous pouvez utiliser la commande suivante dans un terminal :"
+            contenu="Pour savoir si Node.js est déjà installée et aussi savoir sa version, vous pouvez utiliser la commande suivante dans un CodeBlock :"
         />
-        <Terminal
-            contenu='node --version'
+        <CodeBlock
+            // contenu='node --version'
+            type='terminal'
+            langage='jsx'
+            contenu='node -v'
         />
 
         <Titre2
@@ -248,14 +326,14 @@ export default function ContenuModule1() {
         <DescriptionProjet />
         <Titre2 title='Créer un projet react avec Next.js' />
         <Item
-            item='Ouvrir un terminal'
-            description=" : Faire un clic droit à l'emplacement où l'on souhaite créer le projet. Puis cliquer sur 'Ouvrir dans un terminal'"
+            item='Ouvrir un CodeBlock'
+            description=" : Faire un clic droit à l'emplacement où l'on souhaite créer le projet. Puis cliquer sur 'Ouvrir dans un CodeBlock'"
         />
         <Item
             item='Saisir la commande qui suit'
             description=" : @latest siginfie que nous utilisons la version la plus récente de create-next-app"
         />
-        <Terminal contenu="npx create-next-app@latest" />
+        <CodeBlock type='terminal' contenu="npx create-next-app@latest" langage='jsx' />
         <Paragraphe
             contenu="Il suffit donc de répondre aux questions posées pour que le projet soit créé. Dans notre cas, voici les réponses à forunir : "
         />
@@ -295,18 +373,92 @@ export default function ContenuModule1() {
             title="Tester le fonctionnement de l'application"
         />
         <Paragraphe
-            contenu="Pour tester le fonctionnement de l'application, il suffit de saisir les commandes qui vont suivre dans le terminal. La première commande nous permettra de nous positionner dans le dossier de notre projet bilio-app et la deuxième permettra d'exécuter l'application."
+            contenu="Pour tester le fonctionnement de l'application, il suffit de saisir les commandes qui vont suivre dans le CodeBlock. La première commande nous permettra de nous positionner dans le dossier de notre projet bilio-app et la deuxième permettra d'exécuter l'application."
         />
-        <Terminal contenu = 'cd biblio-app'/>
-        <Terminal contenu = 'npm run dev'/>
+        <CodeBlock type='terminal' contenu='cd biblio-app' langage='jsx' />
+        <CodeBlock type='terminal' contenu='npm run dev' langage='jsx' />
         <Paragraphe
-        contenu="Pour finir, il suffit de placer le pointeur de la souris sur le lien 'http://localhost:3000' qui apparait, et de cliquer avec le bouton gauche de la souris pour voir la page d'accueil de l'application s'ouvrir avec le navigateur par défaut."
+            contenu="Pour finir, il suffit de placer le pointeur de la souris sur le lien 'http://localhost:3000' qui apparait, et de cliquer avec le bouton gauche de la souris pour voir la page d'accueil de l'application s'ouvrir avec le navigateur par défaut."
         />
         {/* // #endregion Création d'un projet React avec Next.js */}
 
         <Divider />
         {/* // #region Structure d\'un projet React avec Next.js */}
         <Titre1 title="Structure d'un projet React avec Next.js" index='4' />
+        <Paragraphe
+            contenu="Maintenant, est venu le moment pour nous d'explorer brièvement les différents fichiers générés lors de la création de notre projet. Si la création du projet s'est déroulée avec succès, votre projet aura la structure suivante : "
+        />
+        <DescriptionImage
+            title='Structure du projet'
+            url='structure.png'
+        />
+        <Titre2 title="Le dossier '/app'" />
+        <Paragraphe
+            contenu="Ce dossier contiendra la structure de base de notre application. Comme indiqué sur l'image précedente, ce dossier contiendra entre autres :"
+        />
+        <Item
+            item="Le fichier 'layout.js'"
+            description=" : C'est ici que sera définie la structure générale de notre application. Ce fichier très important nous permettra de définir les éléments communs à toutes les pages tels que les pieds de page, les barres de navigation et bien d'autres."
+        />
+        <Item
+            item="Le fichier 'page.js'"
+            description=" : C'est quelque sorte notre page d'accueil."
+        />
+        <Item
+            item="Le fichier 'page.module.css'"
+            description=" : Cette page contiendra le CSS du fichier page.js."
+        />
+        <Item
+            item="Le fichier 'globals.css'"
+            description=" : Dans ce fichier, nous définirons du CSS pouvant être appliqué à toutes les pages de notre application. On pourra y définir entre autres des couleurs, des polices de caractères et bien d'autres. "
+        />
+        <Item
+            item="Le fichier 'favicon.ico'"
+            description=" : C'est une petite icône utilisée pour représenter l'application dans les onglets des navigateurs, les favoris, les barres d'adresses, et d'autres endroits où une représentation graphique du site est requise. Nous verrons plus tard comment la modifier."
+        />
+        <Titre2 title="Le dossier '/public'" />
+        <Paragraphe
+            contenu="Ce dossier contiendra tous les fichiers statiques de notre application. Il s'agit des fichiers qui ne seront pas compilés par Babel. Parmi ces fichiers, on peut citer les fichiers images, .json, .txt, les icônes et bien d'autres."
+        />
+        <Titre2 title="Le fichier '/package.json'" />
+        <Paragraphe
+            contenu="il contiendra les configurations du projet avec Node.js. D'autres configurations seront ajoutées avec l'évolution du cours." />
+        <Titre2 title="Le fichier '/next.config.mjs'" />
+        <Paragraphe
+            contenu="C'est ce fichier qui contient les configurations de Next. Nous y reviendrons."
+        />
         {/* // #endregion Structure d\'un projet React avec Next.js */}
+
+        <Divider />
+        {/* // #region Configurations de base pour notre projet */}
+        <Titre1
+            title='Configurations de base pour notre projet'
+            index='5'
+        />
+        <Paragraphe
+            contenu="Jusqu'à présent, notre application, lorsqu'elle est exécutée, affiche des liens vers des pages de Vercel. Nous allons remplacer certains codes par les nôtres afin d'afficher simplement ' soyez les bienvenus sur biblio-app'. Pour cela, vous devez remplacer les codes des 4 fichiers qui vont suivre, par les codes fournis." />
+        <Remarque
+            type='Remarque'
+            contenu="Vous pouvez copier le code grâce au bouton situé à l'extrémité droite en haut du bloc de code."
+        />
+        <Titre2 title="fichier '/app/layout.js'" />
+        <CodeBlock chemin='/app/layout.js' contenu={layout} langage='jsx' />
+        <Titre2 title="fichier '/app/page.js'" />
+        <CodeBlock chemin='/app/page.js' contenu={page} langage='jsx' />
+        <Titre2 title="fichier '/app/page.module.css'" />
+        <CodeBlock chemin='/app/page.module.css' contenu={page_module} langage='css' />
+        <Titre2 title="fichier '/app/globals.css'" />
+        <CodeBlock chemin='/app/globals.css' contenu={globals_css} langage='css' />
+        <DownloadLink
+        url='./css/globals.css'
+        item='globals.css complet'
+        />
+        <Remarque
+            type='Remarque'
+            contenu="Il suffit d'enregistrer les modifications et l'application affichera 'Soyez les bienvenus sur biblio-app' au centre de la page."
+        />
+        <Titre1 title='Présentation du projet' index='6'/>
+        <Titre1 title='Travail à faire' index='7'/>
+        {/* // #endregion Configurations de base pour notre projet */}
     </>
 }

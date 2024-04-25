@@ -1,0 +1,50 @@
+.container {
+    font-size: var(--normal-font-size);
+    line-height: var(--interligne);
+    text-align: justify;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    border: 3px solid var(--grey2);
+    border-radius: 10px;
+    font-weight: 300;
+    position: relative;
+    z-index: var(--z-back);
+}
+
+.prompt {
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.editor {
+    padding: 1rem;
+    padding-top: 1.5rem;
+}
+
+.terminal {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--grey);
+    color: var(--first-color-alt);
+    font-size: var(--small-font-size);
+    padding: .1rem .5rem;
+    font-weight: 700;
+    border-bottom: solid 2px var(--grey2);
+}
+
+.contenu {
+    overflow-x: auto;
+}
+
+.contenu pre {
+    max-width: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
