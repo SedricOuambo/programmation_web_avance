@@ -455,9 +455,27 @@ body.dark {
         />
         <Remarque
             type='Travail à faire'
-            contenu="La dernière chose à faire sera de changer les extensions des fichiers layout.js et page.js en .jsx, pour des raisons que nous avons évoquées plus haut." />
-        <Titre1 title='Présentation du projet' index='6' />
-        <Titre1 title='Travail à faire' index='7' />
+            contenu="La dernière chose à faire sera de changer les extensions des fichiers layout.js et page.js en .jsx, pour des raisons que nous avons évoquées plus haut."
+        />
+        <Titre1 title='Code source' index='6' />
+        <DownloadLink
+            url='./code-source/biblio-app-module-1.zip'
+            item='Télécharger le code source du projet créé'
+        />
+        <Remarque
+            type="Important"
+            contenu="Avant d'executer le projet téléchargé, bien vouloir exécuter la commande 'npm i'."
+        />
+        <Titre1 title='Présentation du projet' index='7' />
+        <DownloadLink
+            url='./pdf/projet-1.pdf'
+            item='Télécharger le projet'
+        />
+        <Titre1 title='Travail à faire' index='8' />
+        <DownloadLink
+            url='./pdf/semaine-1.pdf'
+            item='Télécharger le travail'
+        />
         {/* // #endregion Configurations de base pour notre projet */}
     </>
 }

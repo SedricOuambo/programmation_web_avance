@@ -24,10 +24,10 @@
   --couleur4:hsl(205, 60%, 33%);
 
   /* Les differentes tailles pour les petits ecrans */
-  --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
+  --big-font-size: 1.75rem;
+  --h1-font-size: 1.25rem;
+  --h2-font-size: 1rem;
+  --h3-font-size: .75rem;
   --normal-font-size: .98rem;
   --small-font-size: .813rem;
   --smaller-font-size: .60rem;
@@ -66,8 +66,8 @@
 /****** Les tailles pour les grands ecrans *************/
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1.10rem;

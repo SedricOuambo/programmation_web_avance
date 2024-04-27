@@ -107,6 +107,23 @@ export default function RootLayout({ children }) {
 }
 `;
 
+    const logo = `<div className={styles.title}>
+<Image
+    src={logo}
+    alt="Logo React"
+    width={80}
+/>
+<h1>Titre du site web</h1>
+</div>
+`;
+
+    const logo_css = `.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+}
+`;
     return <>
         <Divider />
         {/* #region Notion de Framework */}
@@ -291,6 +308,116 @@ export default function RootLayout({ children }) {
         <Divider />
         {/* #region Image dans Next.js */}
         <Titre1 title='Image dans Next.js' index='4' />
+        <Titre2 title='Le composant Image' />
+        <Paragraphe
+            contenu="Comme les polices de caractères, les images doivent également être optimisées dans une application React avec Next.js. A cet effet, Next.js a prévu un composant spécial appelé 'Image'. Il s'agit d'une extension de la balise <img> connue habituellement comme balise d'insertion d'image dans une page web. "
+        />
+        <Paragraphe
+            contenu="Vous avez sans doute dévinez qu'un lieu et place de la balise <img>, nous utiliserons le composant 'Image' pour insérer nos images. Cela pour plusieurs raisons:"
+        />
+        <Item
+            item="Optimisation de la taille"
+            description=" : Le composant 'Image' génère différentes versions d'une image pour s'adapter à divers affichages (taille d'écran, résolution)"
+        />
+        <Item
+            item="Chargement paresseux (Lazy Loading)"
+            description=" : Les images ne sont chargées que lorsqu'elles sont visibles dans le viewport, ce qui réduit le temps de chargement initial et économise la bande passante"
+        />
+        <Item
+            item="Prise en charge des formats modernes"
+            description=" : Next.js prend en charge des formats d'images modernes tels que AVIF et WebP, qui offrent de meilleures performances et des tailles de fichiers plus petites par rapport à des formats plus anciens comme JPEG et PNG."
+        />
+        <Item
+            item="Manipulation facile des attributs"
+            description=" : Le composant 'Image' de Next.js offre des fonctionnalités avancées comme le redimensionnement, la recadrage, la gestion des ratios d'aspect, etc., permettant de contrôler précisément l'apparence et le comportement des images."
+        />
+        <Titre2 title='Illustration' />
+        <Paragraphe
+            contenu="Pour illustrer le fonctionnement du composant 'Image', nous allons ajouter un logo à notre application 'biblio-app'. Pour cela, il faut suivre les étapes suivantes:"
+        />
+        <Item
+            item="Le logo"
+            description=" : Télécharger le logo et le sauvegarder dans le dossier 'public' de 'biblio-app'."
+        />
+        <DownloadLink
+            url='./img/react.webp'
+            item='Télécharger le logo'
+        />
+        <Item
+            item="Importer 'Image'"
+            description=" : Au début du composant 'Header.jsx', Insérer le code qui va suivre pour importer le composant 'Image' de Next."
+        />
+        <CodeBlock chemin='/components/Header.jsx' contenu="import Image from 'next/image';" langage='jsx' />
+        <Item
+            item="Importer le logo"
+            description=" : Toujours au début du composant 'Header.jsx', Insérer le code qui va suivre, pour importer le logo téléchargé."
+        />
+        <CodeBlock chemin='/components/Header.jsx' contenu="import logo from '@/public/react.webp';" langage='jsx' />
+        <Item
+            item="Usage de 'Image'"
+            description=" : Juste après la ligne 'return <header ...>' du composant 'Header.jsx', Insérer le code qui va suivre."
+        />
+        <CodeBlock chemin='/components/Header.jsx' contenu={logo} langage='jsx' />
+        <Item
+            item="Modifier CSS"
+            description=" : Dans 'Header.module.css', ajouter le code CSS suivant :" />
+        <CodeBlock chemin='/components/Header.module.css' contenu={logo_css} langage='css' />
+        <Paragraphe
+            contenu="Il ne reste plus qu'à sauvegarder toutes les modifications pour voir le logo apparaitre."
+        />
         {/* // #endregion Image dans Next.js */}
+
+        <Divider />
+        {/* #region Quelques trucs utiles */}
+        <Titre1 title='Quelques trucs utiles' index='5' />
+        <Paragraphe
+            contenu="Maintenant que nous sommes assez armés pour créer la base de notre de notre application, il est important d'adopter de bonnes pratiques avant d'avancer. Ces bonnes pratiques nous permettrons d'avoir une application finale performante."
+        />
+        <Titre2 title="Les types d'images" />
+        <Paragraphe
+            contenu="Il est conseillé d'utiliser des formats d'images modernes tels que AVIF et WebP. en effet, ces formats offrent de meilleures performances et des tailles de fichiers plus petites par rapport à des formats plus anciens. A vous donc de choisir quel format utiliser."
+        />
+        <LienExterne
+            url='https://themeisle.com/blog/avif-vs-webp/#gref'
+            description='AWIF vs WebP'
+        />
+        <Paragraphe
+            contenu="Pour convertir vos images, vous pouvez utiliser des outils comme 'Squoosh', un outil de compression d'image de Google, qui permet de convertir des images entre différents formats, y compris AVIF et WebP, et de comparer leur qualité et leur taille."
+        />
+        <LienExterne
+            url='https://squoosh.app/'
+            description='Squoosh'
+        />
+        <Titre2 title="Le contraste des couleurs" />
+        <Paragraphe
+            contenu="Il est important de savoir qu'un mauvais choix de couleurs de texte et d'arrière-plan, entraînera un contraste de mauvaise qualité et par conséquence, affectera les performances de votre application. Ainsi, vers la fin de ce cours, lorsque nous testerons les performances de l'application, vous serez contraint d'apporter de nombreuses modifications si les couleurs ont été mal choisies."
+        />
+        <Paragraphe
+            contenu="Pour éviter ce désagrément, vous pouvez vérifier le contraste de vos couleurs à partir du lien suivant:"
+        />
+        <LienExterne
+            url='https://dequeuniversity.com/rules/axe/4.8/color-contrast'
+            description='Vérifier le contraste'
+        />
+        <Titre2 title="CSS inutile" />
+        <Paragraphe
+            contenu="Débarrassez-vous progressivement de tout code CSS inutilisé. On a tendance à se dire qu'on fera le ménage à la fin, mais cela devient pénible lorsque le site devient grand." />
+        {/* // #endregion Quelques trucs utiles */}
+
+        <Titre1 title='Code source' index='6' />
+        <DownloadLink
+            url='./code-source/biblio-app-module-2.zip'
+            item='Télécharger le code source du projet créé'
+        />
+        <Remarque
+            type="Important"
+            contenu="Avant d'executer le projet téléchargé, bien vouloir exécuter la commande 'npm i'."
+        />
+
+        <Titre1 title="Travail à faire" index='7' />
+        <DownloadLink
+            url='./pdf/semaine-2.pdf'
+            item='Télécharger le travail'
+        />
     </>
 }

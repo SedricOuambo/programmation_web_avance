@@ -21,6 +21,7 @@ export default function Module1() {
         'Création d\'un projet React avec Next.js',
         'Structure d\'un projet React avec Next.js',
         'Configurations de base pour notre projet',
+        'Code source',
         'Présentation du projet',
         'Travail à faire',
     ]

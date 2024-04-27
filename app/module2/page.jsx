@@ -20,6 +20,8 @@ export default function Module2() {
         'Types de CSS',
         'Polices de caractères optimisées dans Next.js',
         'Image dans Next.js',
+        'Quelques trucs utiles',
+        'Code source',
         'Travail à faire',
     ]
     return <>
