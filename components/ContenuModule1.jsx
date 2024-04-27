@@ -14,8 +14,7 @@ import DescriptionImage from '@/components/DescriptionImage';
 import DownloadLink from '@/components/DownloadLink';
 
 export default function ContenuModule1() {
-    const layout = `
-import { Inter } from "next/font/google";
+    const layout = `import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -31,8 +30,7 @@ export default function RootLayout({ children }) {
 }
 `;
 
-    const page = `
-import Image from "next/image";
+    const page = `import Image from "next/image";
 import styles from "./page.module.css";
 export default function Home() {
     return (
@@ -45,8 +43,7 @@ export default function Home() {
 }
 `;
 
-    const page_module = `
-.welcome {
+    const page_module = `.welcome {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,8 +55,7 @@ export default function Home() {
   }
 `;
 
-    const globals_css = `
-:root {
+    const globals_css = `:root {
     --hue-color: 165;
     --first-color: hsl(var(--hue-color), 60%, 33%);
     /* Les differentes tailles pour les petits ecrans */

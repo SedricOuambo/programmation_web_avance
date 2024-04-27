@@ -4,6 +4,7 @@ import 'prismjs';
 import 'prismjs/components/prism-javascript'; // Chargez les langages nécessaires
 import 'prismjs/components/prism-css'; // Chargez les langages nécessaires
 import 'prismjs/components/prism-jsx'; // Chargez les langages nécessaires
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import Prism from 'prismjs';
 import styles from './CodeBlock.module.css';
 import { FaRegCopy } from "react-icons/fa6";

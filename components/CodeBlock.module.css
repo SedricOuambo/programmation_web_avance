@@ -39,12 +39,21 @@
 
 .contenu {
     overflow-x: auto;
+    margin-top: 1rem;
 }
 
 .contenu pre {
-    max-width: 1rem;
+    max-width: 20rem;
 }
 
 .button:hover {
     cursor: pointer;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 0.8em;
+    padding-right: 10px;
 }
