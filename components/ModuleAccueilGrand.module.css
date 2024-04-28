@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 2rem;
-    margin-left: 0rem;
-    margin-top: 2rem;
+    margin: 0.3rem;
+    margin-bottom: 1rem;
 }
 
 .sous_bloc{
@@ -29,29 +28,25 @@
     border-radius: 50%;
     font-weight: var(--font-medium-bold);
     font-size: var(--small-font-size);
-    width: 2.7rem;
+    width: 1.7rem;
     height: 1.5rem;
 }
 
 .module_numero{
     display: flex;
     gap: .5rem;
-    font-size: var(--small-font-size);
+    font-size: var(--h3-font-size);
+    font-style: italic;
 }
 
 .bloc_titre div{
-    font-size: var(--small-font-size);
+    font-size: var(--h1-font-size);
     font-weight: var( --font-medium-bold);
-}
-
-.bloc_titre span{
-    font-size: var(--small-font-size);
-    font-style: italic;
 }
 
 @media screen and (min-width : 568px) {
     .bloc{
-        margin-left: 2.5rem;
+        margin: 2rem 1.5rem;
     }
 
     .bloc_titre div{

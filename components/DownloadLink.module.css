@@ -15,6 +15,11 @@
     text-decoration: underline;
 }
 
+.icone{
+    color: var(--first-color-alt);
+    font-weight: 800;
+}
+
 @media screen and (min-width: 768px){
     .div{
         margin: 0 1.5rem;

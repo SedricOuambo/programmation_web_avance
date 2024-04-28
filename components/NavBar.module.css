@@ -1,10 +1,10 @@
 /* navbarBAR */
 .navbar {
-    color: #fff;
+	color: #fff;
 	height: var(--navbar-height);
 	background: var(--first-color);
 	padding: 0 24px;
-    padding-right: 2rem;
+	padding-right: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -15,86 +15,87 @@
 	left: 0;
 }
 
-.logo{
+.logo {
 	font-size: var(--h3-font-size);
 	font-weight: var(--font-bold);
+	color: var(--light);
 }
 
-.bloc_droit{
+.bloc_droit {
 	display: flex;
 	align-items: center;
 }
 
-.bloc_couleurs{
+.bloc_couleurs {
 	display: none;
 	flex-direction: column;
 	position: absolute;
 	top: calc(var(--navbar-height) - 1.2rem);
 	background-color: var(--grey2);
 	border-radius: 10px;
-	z-index: var(--z-fixed);
+	z-index: 1500;
 }
 
-.active{
+.active {
 	display: flex;
 }
 
-.couleur1{
+.couleur1 {
 	color: var(--couleur1);
 }
 
-.couleur1:hover{
+.couleur1:hover {
 	background-color: var(--couleur1);
 	color: var(--light);
 }
 
-.couleur2{
+.couleur2 {
 	color: var(--couleur2);
 }
 
-.couleur2:hover{
+.couleur2:hover {
 	background-color: var(--couleur2);
 }
 
-.couleur3{
+.couleur3 {
 	color: var(--couleur3);
 }
 
-.couleur3:hover{
+.couleur3:hover {
 	background-color: var(--couleur3);
 }
 
-.couleur4{
+.couleur4 {
 	color: var(--couleur4);
 }
 
-.couleur4:hover{
+.couleur4:hover {
 	background-color: var(--couleur4);
 }
 
-.bloc_couleurs span{
+.bloc_couleurs span {
 	padding: 0.5rem .5rem;
 	font-weight: 500;
 }
 
-.bloc_couleurs span:hover{
+.bloc_couleurs span:hover {
 	color: var(--light);
 	cursor: pointer;
 	border-radius: 10px;
 }
 
-.colors{
+.colors {
 	font-size: var(--h2-font-size);
 }
 
-.colors:hover{
+.colors:hover {
 	cursor: pointer;
 }
 
-.navbar a {
+/* .navbar a {
 	color: var(--light);
-}
-.navbar .bx{
+} */
+.navbar .bx {
 	cursor: pointer;
 	color: #fff;
 }
@@ -103,7 +104,7 @@
 	display: flex;
 	align-items: center;
 	height: 25px;
-    margin-right: 5rem;
+	margin-right: 5rem;
 }
 
 .form input {
@@ -132,6 +133,7 @@
 	border-radius: 0 36px 36px 0;
 	cursor: pointer;
 }
+
 .navbar .notification {
 	font-size: 20px;
 	position: relative;
@@ -148,7 +150,7 @@
 	margin-left: 5rem;
 }
 
-.switch_mode::before {
+.isLight::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -160,10 +162,18 @@
 	transition: all .3s ease;
 }
 
-#switch_mode:checked + .switch_mode::before {
+.isDark::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	border-radius: 50%;
+	transition: all .3s ease;
 	left: calc(100% - (25px - 4px) - 2px);
+	background: var(--first-color-second);
 }
+
 /* NAVBAR */
 
-@media screen and (min-width: 768px){
-}
+@media screen and (min-width: 768px) {}

@@ -79,8 +79,9 @@
 body.dark {
   --light: #0C0C1E;
   --grey: #060714;
-  --dark: #FBFBFB;
-  --first-color: #0C0C1E;
+  --dark: hsl(var(--hue-color), 8%, 45%);
+  --first-color-lighter:#060714;
+  color: hsl(var(--hue-color), 8%, 45%);
 }
 
 * {

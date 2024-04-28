@@ -8,7 +8,7 @@
     gap: .5rem;
     padding: 1rem;
     background: linear-gradient(1deg, var(--first-color-second) 5%, var(--first-color));
-    color: #fff;
+    color: var(--light);
     font-size: var(--small-font-size);
     font-weight: var(--font-medium-bold);
     border-radius: 10px;

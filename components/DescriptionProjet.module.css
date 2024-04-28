@@ -1,6 +1,6 @@
 .container {
     background-color: var(--grey);
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 15px;
 }
 
@@ -35,7 +35,7 @@
     border: solid var(--grey2) 3px;
     border-radius: 15px;
     margin-top: 1rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
     font-size: var(--normal-font-size);
     line-height: var(--interligne);
 }

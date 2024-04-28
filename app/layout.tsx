@@ -9,6 +9,7 @@ import { ModuleActifProvider } from "@/components/Provider/ModuleActifProvider";
 import { TitreModuleProvider } from "@/components/Provider/TitreModuleProvider";
 import { MenuActifProvider } from '@/components/Provider/MenuActifProvider';
 import { InstalledDateProvider } from '@/components/Provider/InstalledDateProvider';
+import { DarkModeProvider } from '@/components/Provider/DarkModeProvider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,16 +36,18 @@ export default function RootLayout({
           <TitreModuleProvider>
             <MenuActifProvider>
               <InstalledDateProvider>
-                <Header />
-                <main className={styles.main}>
-                  <section className={styles.section_main}>
-                    <MonGrandBloc />
-                    <div className={styles.children}>
-                      {children}
-                    </div>
-                  </section>
-                </main>
-                <Footer />
+                <DarkModeProvider>
+                  <Header />
+                  <main className={styles.main}>
+                    <section className={styles.section_main}>
+                      <MonGrandBloc />
+                      <div className={styles.children}>
+                        {children}
+                      </div>
+                    </section>
+                  </main>
+                  <Footer />
+                </DarkModeProvider>
               </InstalledDateProvider>
             </MenuActifProvider>
           </TitreModuleProvider>

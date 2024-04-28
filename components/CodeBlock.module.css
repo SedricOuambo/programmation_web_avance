@@ -2,9 +2,9 @@
     font-size: var(--normal-font-size);
     line-height: var(--interligne);
     text-align: justify;
-    margin: 0 1rem;
+    margin: 0 .3rem;
     margin-bottom: 1rem;
-    border: 3px solid var(--grey2);
+    border: 2px solid var(--grey2);
     border-radius: 10px;
     font-weight: 300;
     position: relative;
@@ -13,7 +13,7 @@
 
 .prompt {
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 1.8rem;
 }
 
 .editor {
@@ -43,7 +43,7 @@
 }
 
 .contenu pre {
-    max-width: 20rem;
+    max-width: 10rem;
 }
 
 .button:hover {
@@ -56,4 +56,10 @@
     top: 0;
     font-size: 0.8em;
     padding-right: 10px;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        margin: 1.5rem 1.5rem;
+    }
 }

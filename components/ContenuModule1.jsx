@@ -460,11 +460,11 @@ body.dark {
         <Titre1 title='Code source' index='6' />
         <DownloadLink
             url='./code-source/biblio-app-module-1.zip'
-            item='Télécharger le code source du projet créé'
+            item='Télécharger le projet créé'
         />
         <Remarque
             type="Important"
-            contenu="Avant d'executer le projet téléchargé, bien vouloir exécuter la commande 'npm i'."
+            contenu="Avant d'executer la commande 'npm run dev', bien vouloir exécuter la commande 'npm i'."
         />
         <Titre1 title='Présentation du projet' index='7' />
         <DownloadLink

@@ -19,7 +19,8 @@ export default function Accueil() {
         <ModuleAcueil
             numero="2"
             titre="Les composants et props"
-            description="Créer des composants et partager des données entre eux." />
+            description="Créer des composants d'une application React avec Next.js et leurs passer des données."
+        />
         <ModuleAcueil
             numero="3"
             titre="Affichage conditionnel des données"

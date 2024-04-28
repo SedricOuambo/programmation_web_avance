@@ -28,7 +28,7 @@ export default function Module2() {
         <ModuleAcueilGrand
             numero="2"
             titre="Les composants et props"
-            description="A la fin de ce deuxième module, l'étudiant sera capable de créer des composants et partager des données entre eux. Il devra aussi être capable d'optimiser les images ainsi que les polices de caractères de son projet."
+            description="A la fin de ce deuxième module, l'étudiant devra être capable de créer des composants et de leur passer des données. Il devra aussi être capable d'optimiser les images ainsi que les polices de caractères de son projet."
         />
         <BlocObjectifs
             listeObjectifs={tabObjectifs}
