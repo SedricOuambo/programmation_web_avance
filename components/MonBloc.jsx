@@ -40,12 +40,12 @@ export default function MonBloc() {
             </div>
             <div className={styles.blocDroit}>
                 <Link href='/'
-                onClick={() => {
-                    setModuleActif(0);
-                    setTitreModule('Plan du cours');
-                    setMenu('NotActive');
-                }}>
-                    <IoHome className={styles.home}/>
+                    onClick={() => {
+                        setModuleActif(0);
+                        setTitreModule('Plan du cours');
+                        setMenu('NotActive');
+                    }}>
+                    <IoHome className={styles.home} />
                 </Link>
                 <div className={styles.separateur}></div>
                 <Link href='#logo'><div className={styles.arrowUp}><FaArrowUp /></div></Link>
@@ -54,16 +54,19 @@ export default function MonBloc() {
         <div className={styles.sous_bloc + ' ' + (menu === 'Active' ? styles.display_sous_bloc : "")}>
             <div className={styles.elements}>
                 <MonSousBloc
+                    actif='true'
                     chemin="/"
                     numero="0"
                     titre="Plan du cours"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module1"
                     numero="1"
                     titre="Créer un projet React avec Next.js"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module2"
                     numero="2"
                     titre="Les composants et props"

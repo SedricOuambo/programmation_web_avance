@@ -12,11 +12,13 @@ export default function Accueil() {
             objectif2="Séparer le code en modules et en composants pour faciliter le développement et la maintenance des projets web."
         />
         <ModuleAcueil
+            actif='true'
             numero="1"
             titre="Créer un projet React avec Next.js"
             description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
         />
         <ModuleAcueil
+            actif='true'
             numero="2"
             titre="Les composants et props"
             description="Créer des composants d'une application React avec Next.js et leurs passer des données."

@@ -16,8 +16,9 @@ export default function ModuleAcueil(props) {
             setModuleActif(props.numero);
             setTitreModule(props.titre);
             setMenu('NotActive');
-        }}>
-        <div className={styles.bloc}>
+        }}
+        className={styles.lien +' '+(props.actif && styles.actif)}>
+        <div className={styles.bloc + ' ' + (props.actif && styles.actif)}>
             <div className={styles.numero}> {props.numero}</div>
             <div className={styles.bloc_titre}>
                 <span className={styles.module_numero}>

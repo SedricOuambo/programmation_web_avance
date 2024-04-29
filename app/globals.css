@@ -1,5 +1,6 @@
 /* Inclure un thème de PrismJS */
 @import 'prismjs/themes/prism.css';
+
 :root {
   --hue-color: 235;
   /* --hue-color: 165; */
@@ -18,10 +19,10 @@
   --grey: #fafafa;
   --light: #FFF;
   --dark: #000;
-  --couleur1:hsl(295, 60%, 33%);
-  --couleur2:hsl(165, 60%, 33%);
-  --couleur3:hsl(235, 60%, 33%);
-  --couleur4:hsl(205, 60%, 33%);
+  --couleur1: hsl(295, 60%, 33%);
+  --couleur2: hsl(165, 60%, 33%);
+  --couleur3: hsl(235, 60%, 33%);
+  --couleur4: hsl(205, 60%, 33%);
 
   /* Les differentes tailles pour les petits ecrans */
   --big-font-size: 1.75rem;
@@ -76,11 +77,11 @@
   }
 }
 
-body.dark {
+[data-theme='dark'] {
   --light: #0C0C1E;
   --grey: #060714;
   --dark: hsl(var(--hue-color), 8%, 45%);
-  --first-color-lighter:#060714;
+  --first-color-lighter: #060714;
   color: hsl(var(--hue-color), 8%, 45%);
 }
 

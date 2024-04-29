@@ -9,7 +9,8 @@ import { ModuleActifProvider } from "@/components/Provider/ModuleActifProvider";
 import { TitreModuleProvider } from "@/components/Provider/TitreModuleProvider";
 import { MenuActifProvider } from '@/components/Provider/MenuActifProvider';
 import { InstalledDateProvider } from '@/components/Provider/InstalledDateProvider';
-import { DarkModeProvider } from '@/components/Provider/DarkModeProvider';
+import { ThemeColorProvider } from '@/components/Provider/ThemeColorProvider';
+import { ThemeProvider } from 'next-themes'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,18 +37,20 @@ export default function RootLayout({
           <TitreModuleProvider>
             <MenuActifProvider>
               <InstalledDateProvider>
-                <DarkModeProvider>
-                  <Header />
-                  <main className={styles.main}>
-                    <section className={styles.section_main}>
-                      <MonGrandBloc />
-                      <div className={styles.children}>
-                        {children}
-                      </div>
-                    </section>
-                  </main>
-                  <Footer />
-                </DarkModeProvider>
+                <ThemeProvider>
+                  <ThemeColorProvider>
+                    <Header />
+                    <main className={styles.main}>
+                      <section className={styles.section_main}>
+                        <MonGrandBloc />
+                        <div className={styles.children}>
+                          {children}
+                        </div>
+                      </section>
+                    </main>
+                    <Footer />
+                  </ThemeColorProvider>
+                </ThemeProvider>
               </InstalledDateProvider>
             </MenuActifProvider>
           </TitreModuleProvider>

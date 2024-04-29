@@ -3,26 +3,22 @@ import styles from './NavBar.module.css';
 import { useModuleActif } from './Provider/ModuleActifProvider';
 import { useTitreModule } from './Provider/TitreModuleProvider';
 import { useMenuActif } from './Provider/MenuActifProvider';
-import { useDarkMode } from './Provider/DarkModeProvider';
+import { useThemeColor } from './Provider/ThemeColorProvider';
+import { useTheme } from 'next-themes'
 import Link from 'next/link';
 import { IoColorFill } from "react-icons/io5";
 import React, { useState, useEffect } from 'react';
 
 export default function NavBar() {
+    const { theme, setTheme } = useTheme();
+    const vide='';
     //Gestion du dark mode
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    // Fonction pour basculer le mode
     const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
+        theme === 'light' ? setTheme('dark') : setTheme('light');
     };
-    useEffect(() => {
-        // Ajoute ou supprime la classe 'dark' du body selon l'état de 'isDarkMode'
-        document.body.classList.toggle('dark', isDarkMode);
-    }, [isDarkMode]);
-    //Fin gestion du dark mode
 
     // État pour stocker la valeur du code couleur courante
-    const [color, setColor] = useState('235');
+    const [color, setColor] = useThemeColor();
     const [actif, setActif] = useState('false');
 
     // Effet pour mettre à jour la variable CSS lorsque la couleur change
@@ -76,11 +72,13 @@ export default function NavBar() {
                 </div>
             </div>
             {/* gestion du changement de position du bouton switch-mode */}
-            <label htmlFor="switch-mode"
-                className={styles.switch_mode +' '+
-                            (!isDarkMode ? styles.isLight : styles.isDark)}
-                onClick={toggleTheme}>
-            </label>
+            <div
+                className={styles.switch_mode + ' ' +
+                    (theme === 'light' ? styles.isLight : styles.isDark)
+                }
+                onClick={toggleTheme}
+            >
+            </div>
         </div>
     </nav>
 }

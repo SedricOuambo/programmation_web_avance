@@ -14,8 +14,9 @@ export default function MonSousBloc(props) {
             setModuleActif(props.numero);
             setTitreModule(props.titre);
             setMenu('NotActive');
-        }}>
-        <div className={styles.container}>
+        }}
+        className={styles.lien + ' ' + (props.actif && styles.actif)}>
+        <div className={styles.container+ ' ' +(props.actif && styles.actif)}>
             <div className={styles.numero}>{props.numero}</div>
             <div className={styles.titre}>
                 <div>Module {props.numero}</div>
