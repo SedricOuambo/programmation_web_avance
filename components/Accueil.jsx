@@ -21,17 +21,17 @@ export default function Accueil() {
             actif='true'
             numero="2"
             titre="Les composants et props"
-            description="Créer des composants d'une application React avec Next.js et leurs passer des données."
+            description="Créer des composants d'une application React avec Next.js et leur passer des données."
         />
         <ModuleAcueil
             numero="3"
             titre="Affichage conditionnel des données"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Afficher des données de façon conditionnelle."
         />
         <ModuleAcueil
             numero="4"
             titre="Partage des données entre composants"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Partager des données entre les différents composants"
         />
 
         <UaAccueil
@@ -45,22 +45,20 @@ export default function Accueil() {
         <ModuleAcueil
             numero="5"
             titre="Routage client et changement de page"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Routage client et changement de page"
         />
         <ModuleAcueil
             numero="6"
             titre="Métadonnées et SEO"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
-        />
+            description="Ajouter les métadonnées aux pages pour les engins de recherche" />
         <ModuleAcueil
             numero="7"
             titre="Les formulaires"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
-        />
+            description="Créer et valider les formulaires" />
         <ModuleAcueil
             numero="8"
             titre="Notion de contexte"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Les différents types de contextes et leur utilité."
         />
 
         <UaAccueil
@@ -73,17 +71,17 @@ export default function Accueil() {
         <ModuleAcueil
             numero="9"
             titre="Rendu avec Next.js"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Les types de rendus avec Next.js"
         />
         <ModuleAcueil
             numero="10"
             titre="Nouvelles fonctionnalités de Next.js"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Les nouveautés de Next.js"
         />
         <ModuleAcueil
             numero="11"
             titre="Progressive Web App (PWA)"
-            description="Installer les outils et logiciels qui seront utilisés, et créer un projet React avec Next.js"
+            description="Rendre une application web installable sur PC et mobile"
         />
     </div>
 }
