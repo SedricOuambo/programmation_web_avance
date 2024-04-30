@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Accueil',
     description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
-    images: ['/react.png']
+    images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
   },
   manifest: './manifest.webmanifest'
 };
