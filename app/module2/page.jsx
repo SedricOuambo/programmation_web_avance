@@ -8,7 +8,7 @@ export const metadata = {
     openGraph: {
         title: 'Module2',
         description: 'Les composants React et props',
-        images: ['/react.png']
+        images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
     },
     manifest: './manifest.webmanifest'
 };
