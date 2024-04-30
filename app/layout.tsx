@@ -15,7 +15,7 @@ import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Accueil',
+  title: 'Programmation Web Avancée',
   description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
   openGraph: {
     title: 'Accueil',
