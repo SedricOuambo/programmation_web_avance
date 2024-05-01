@@ -1,4 +1,3 @@
-import styles from './ContenuModule1.module.css';
 import Divider from '@/components/Divider'
 import Titre1 from '@/components/Titre1'
 import Titre2 from '@/components/Titre2'
@@ -7,8 +6,6 @@ import Item from '@/components/Item'
 import Remarque from '@/components/Remarque'
 import LienExterne from '@/components/LienExterne'
 import CodeBlock from '@/components/CodeBlock'
-import DescriptionProjet from '@/components/DescriptionProjet';
-import DescriptionImage from '@/components/DescriptionImage';
 import DownloadLink from '@/components/DownloadLink';
 
 export default function ContenuModule2() {
@@ -173,10 +170,6 @@ export default function RootLayout({ children }) {
         <Remarque
             type='Bon à savoir'
             contenu="Toujours penser à exécuter la commande [npm run dev] pour exécuter l'application."
-        />
-        <Remarque
-            type='Travail à faire'
-            contenu="En suivant la même logique, créez le pied de page ou footer de notre application biblio-app."
         />
         <Titre2 title="Les props et enfants des composants" />
         <Paragraphe
@@ -404,6 +397,12 @@ export default function RootLayout({ children }) {
             contenu="Débarrassez-vous progressivement de tout code CSS inutilisé. On a tendance à se dire qu'on fera le ménage à la fin, mais cela devient pénible lorsque le site devient grand." />
         {/* // #endregion Quelques trucs utiles */}
 
+        <Remarque
+            type="Exercice d'application"
+            contenu="En suivant la même logique, créez le pied de page ou footer de notre application biblio-app. Réorganiser aussi le Header, en créant un composant 'MenuNav' pour contenir le bloc 'nav' qui se trouve actuellment dans Header. Vous devez également créer un composant 'Accueil' qui contiendra tout le contenu actuel du fichier 'page.jsx', puis l'mporter dans ce dernier."
+        />
+
+        <Divider />
         <Titre1 title='Code source' index='6' />
         <DownloadLink
             url='./code-source/biblio-app-module-2.zip'
@@ -414,6 +413,7 @@ export default function RootLayout({ children }) {
             contenu="Avant d'executer la commande 'npm run dev', bien vouloir exécuter la commande 'npm i'."
         />
 
+        <Divider />
         <Titre1 title="Travail à faire" index='7' />
         <DownloadLink
             url='./pdf/semaine-2.pdf'

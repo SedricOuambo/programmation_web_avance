@@ -72,9 +72,10 @@ export default function MonBloc() {
                     titre="Les composants et props"
                 />
                 <MonSousBloc
+                actif='true'
                     chemin="/module3"
                     numero="3"
-                    titre="Affichage conditionnel des données"
+                    titre="Etat, événement et affichage"
                 />
                 <MonSousBloc
                     chemin="/module4"

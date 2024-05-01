@@ -24,9 +24,10 @@ export default function Accueil() {
             description="Créer des composants d'une application React avec Next.js et leur passer des données."
         />
         <ModuleAcueil
+         actif='true'
             numero="3"
-            titre="Affichage conditionnel des données"
-            description="Afficher des données de façon conditionnelle."
+            titre="Etat, événement et Affichage"
+            description="Afficher des données, utiliser le hook d'état et gérer les évévements."
         />
         <ModuleAcueil
             numero="4"

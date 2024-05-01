@@ -454,9 +454,11 @@ body.dark {
             contenu="Il suffit d'enregistrer les modifications et l'application affichera 'Soyez les bienvenus sur biblio-app' au centre de la page."
         />
         <Remarque
-            type='Travail à faire'
+            type="Exercice d'application"
             contenu="La dernière chose à faire sera de changer les extensions des fichiers layout.js et page.js en .jsx, pour des raisons que nous avons évoquées plus haut."
         />
+
+        <Divider />
         <Titre1 title='Code source' index='6' />
         <DownloadLink
             url='./code-source/biblio-app-module-1.zip'
@@ -466,11 +468,15 @@ body.dark {
             type="Important"
             contenu="Avant d'executer la commande 'npm run dev', bien vouloir exécuter la commande 'npm i'."
         />
+
+        <Divider />
         <Titre1 title='Présentation du projet' index='7' />
         <DownloadLink
             url='./pdf/projet-1.pdf'
             item='Télécharger le projet'
         />
+
+        <Divider />
         <Titre1 title='Travail à faire' index='8' />
         <DownloadLink
             url='./pdf/semaine-1.pdf'

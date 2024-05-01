@@ -3,10 +3,10 @@ import ModuleAcueilGrand from "@/components/ModuleAccueilGrand";
 import ContenuModule2 from '@/components/ContenuModule2';
 
 export const metadata = {
-    title: 'Module2',
+    title: 'Composants et props',
     description: 'Les composants React et props',
     openGraph: {
-        title: 'Module2',
+        title: 'Composants et props',
         description: 'Les composants React et props',
         images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
     },

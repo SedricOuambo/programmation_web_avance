@@ -3,10 +3,10 @@ import ModuleAcueilGrand from "@/components/ModuleAccueilGrand";
 import ContenuModule1 from '@/components/ContenuModule1';
 
 export const metadata = {
-    title: 'Module1',
+    title: 'Créer un projet React',
     description: 'Creer un projet React avec Next.js',
     openGraph: {
-        title: 'Module1',
+        title: 'Créer un projet React',
         description: 'Creer un projet React avec Next.js',
         images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
     },
