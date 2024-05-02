@@ -179,7 +179,7 @@ body.dark {
             title='Node.js'
         />
         <Paragraphe
-            contenu="Le premier et l'indispensable outil à installer sera Node.js. C'est un environnement d'exécution JavaScript open source, permettant d'exécuter du code JavaScript dans un CodeBlock."
+            contenu="Le premier et l'indispensable outil à installer sera Node.js. C'est un environnement d'exécution JavaScript open source, permettant d'exécuter du code JavaScript dans un Terminal."
         />
         <LienExterne
             url='https://nodejs.org/en/download/current'
@@ -190,7 +190,7 @@ body.dark {
             contenu="Au cas où Node.js serait déjà installée dans votre ordinateur, vous devez vous rassurer d'avoir la version Node.js 18.17.0 ou plus. En effet, au moment où ce contenu est produit, Next.js a besoin de Node.js 18.17.0 ou plus pour fonctionner correctement. De plus, il est conseillé de télécharger la version Current et non la version LTS de Node.js"
         />
         <Paragraphe
-            contenu="Pour savoir si Node.js est déjà installée et aussi savoir sa version, vous pouvez utiliser la commande suivante dans un CodeBlock :"
+            contenu="Pour savoir si Node.js est déjà installée et aussi savoir sa version, vous pouvez utiliser la commande suivante dans un Terminal :"
         />
         <CodeBlock
             // contenu='node --version'
@@ -322,8 +322,8 @@ body.dark {
         <DescriptionProjet />
         <Titre2 title='Créer un projet react avec Next.js' />
         <Item
-            item='Ouvrir un CodeBlock'
-            description=" : Faire un clic droit à l'emplacement où l'on souhaite créer le projet. Puis cliquer sur 'Ouvrir dans un CodeBlock'"
+            item='Ouvrir un Terminal'
+            description=" : Faire un clic droit à l'emplacement où l'on souhaite créer le projet. Puis cliquer sur 'Ouvrir dans un Terminal'"
         />
         <Item
             item='Saisir la commande qui suit'
@@ -369,7 +369,7 @@ body.dark {
             title="Tester le fonctionnement de l'application"
         />
         <Paragraphe
-            contenu="Pour tester le fonctionnement de l'application, il suffit de saisir les commandes qui vont suivre dans le CodeBlock. La première commande nous permettra de nous positionner dans le dossier de notre projet bilio-app et la deuxième permettra d'exécuter l'application."
+            contenu="Pour tester le fonctionnement de l'application, il suffit de saisir les commandes qui vont suivre dans le Terminal. La première commande nous permettra de nous positionner dans le dossier de notre projet bilio-app et la deuxième permettra d'exécuter l'application."
         />
         <CodeBlock type='terminal' contenu='cd biblio-app' langage='jsx' />
         <CodeBlock type='terminal' contenu='npm run dev' langage='jsx' />
