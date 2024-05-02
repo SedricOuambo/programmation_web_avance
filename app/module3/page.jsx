@@ -25,7 +25,7 @@ export default function Module3() {
     return <>
         <ModuleAcueilGrand
             numero="3"
-            titre="Etat, événement et Affichage"
+            titre="État, événement et Affichage"
             description="A la fin de ce troisième module, l'étudiant devra être capable d'afficher des données sur l'interface graphique, dépendant d'un état précis et suite à un événement."
         />
         <BlocObjectifs

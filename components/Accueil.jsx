@@ -24,15 +24,16 @@ export default function Accueil() {
             description="Créer des composants d'une application React avec Next.js et leur passer des données."
         />
         <ModuleAcueil
-         actif='true'
+            actif='true'
             numero="3"
-            titre="Etat, événement et Affichage"
+            titre="État, événement et Affichage"
             description="Afficher des données, utiliser le hook d'état et gérer les évévements."
         />
         <ModuleAcueil
+            actif='true'
             numero="4"
-            titre="Partage des données entre composants"
-            description="Partager des données entre les différents composants"
+            titre="Effet et affichage répétitif"
+            description="Utiliser le hook d'effet et afficher des données avec répétition."
         />
 
         <UaAccueil

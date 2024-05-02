@@ -1,6 +1,5 @@
 import Divider from '@/components/Divider'
 import Titre1 from '@/components/Titre1'
-import Titre2 from '@/components/Titre2'
 import Paragraphe from '@/components/Paragraphe'
 import Item from '@/components/Item'
 import Remarque from '@/components/Remarque'
