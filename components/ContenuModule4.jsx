@@ -205,7 +205,7 @@ export default function Timer({compte}) {
         {/* #region Travail à faire */}
         <Titre1 title='Travail à faire' index='3' />
         <DownloadLink
-            url='./pdf/semaine-4_.pdf'
+            url='./pdf/Semaine-4_.pdf'
             item='Télécharger le travail'
         />
         {/* // #endregion Travail à faire*/}
