@@ -84,6 +84,7 @@ export default function MonBloc() {
                     titre="Partage des données entre composants"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module5"
                     numero="5"
                     titre="Routage client et changement de page"

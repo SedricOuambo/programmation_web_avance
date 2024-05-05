@@ -45,9 +45,10 @@ export default function Accueil() {
             hébergement."
         />
         <ModuleAcueil
+            actif='true'
             numero="5"
             titre="Routage client et changement de page"
-            description="Routage client et changement de page"
+            description="Utiliser le routage client pour simuler plusieurs pages dans un site web."
         />
         <ModuleAcueil
             numero="6"
