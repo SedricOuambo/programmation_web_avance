@@ -30,7 +30,7 @@ export default function Module1() {
         <ModuleAcueilGrand
             numero="1"
             titre="Créer un projet React avec Next.js"
-            description="Dans cette première partie du cours, nous aurons pour tâche de procéder à l'installation d'outils et logiciels nécessaires pour la création de nos projets. Par la suite, nous entamerons la création d'un projet React en utilisant le Framework Next.js et enfin, nous présenterons une description de la structure d'un projet React avec Next.js."
+            description="Dans cette première partie du cours, nous aurons pour tâche de procéder à l'installation d'outils et logiciels nécessaires pour la création de nos projets. Par la suite, nous entamerons la création d'un projet React en utilisant le Framework Next.js et enfin, nous ferons une description de la structure d'un projet React avec Next.js."
         />
         <BlocObjectifs
             listeObjectifs={tabObjectifs}

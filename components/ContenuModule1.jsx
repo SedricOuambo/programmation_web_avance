@@ -273,6 +273,15 @@ body.dark {
             contenu="Une autre extension de JavaScript pouvant être utilisée en lieu et place de JSX est TypeScript. Mais nous le l'utiliserons pas dans le cadre de notre cours. Pour faire simple, on dira que TypeScript est une version typée de JavaScript."
         />
 
+        <Titre2 title='Babel' />
+        <Paragraphe
+            contenu="Babel est un outil de compilation largement utilisé dans l'écosystème JavaScript. Il est principalement conçu pour convertir le code JavaScript de versions plus récentes ou de syntaxe non standard en un code JavaScript plus ancien, compatible avec un plus grand nombre de navigateurs et d'environnements. Cela permet aux développeurs d'écrire du code JavaScript moderne tout en assurant une compatibilité avec des environnements où des fonctionnalités plus récentes ne sont pas encore prises en charge."
+        />
+        <LienExterne
+            url='https://babel.dev/'
+            description='En savoir plus sur Babel'
+        />
+
         <Titre2 title='clsx' />
         <Paragraphe
             contenu="clsx(classe extensible) est une petite bibliothèque JavaScript/TypeScript que nous utiliserons pour conditionner et combiner des noms de classes CSS de manière simple et efficace. Cela consistera à affecter différentes classes à un élément HTML à partir de certaines conditions préétablies."
