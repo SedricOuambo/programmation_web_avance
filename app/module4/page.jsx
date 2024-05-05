@@ -18,7 +18,7 @@ export default function Module4() {
         'Affichage répété',
         'Le hook d\'effet ou useEffect',
         'Code source',
-        'Travail à faire',
+        'Travail à faire'
     ]
     return <>
         <ModuleAcueilGrand

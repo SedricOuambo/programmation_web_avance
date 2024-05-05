@@ -244,7 +244,7 @@ export default function MenuNav() {
         {/* #region Travail à faire */}
         <Titre1 title='Travail à faire' index='4' />
         <DownloadLink
-            url='./pdf/semaine-5.pdf'
+            url='./pdf/Semaine-5.pdf'
             item='Télécharger le travail'
         />
         {/* // #endregion Travail à faire*/}
