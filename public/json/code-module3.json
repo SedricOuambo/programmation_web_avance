@@ -1,0 +1,38 @@
+[
+    {
+        "title": "import_in_page",
+        "content": "'use client'\nimport Documents from '@/components/Documents';\nimport Connexion from '@/components/Connexion';\nimport Contact from '@/components/Contact';\n"
+    },
+    {
+        "title": "corps_page",
+        "content": "{page === 'accueil' ?\n<Accueil />\n: page === 'documents' ?\n  <Documents />\n  : page === 'contact' ?\n    <Contact />\n    : page === 'connexion' ?\n      <Connexion />\n      : <div>404 - Not Found</div>\n}"
+    },
+    {
+        "title": "final_layout",
+        "content": "'use client'\nimport Documents from '@/components/Documents';\nimport Connexion from '@/components/Connexion';\nimport Contact from '@/components/Contact';\nimport { useState } from 'react';\nimport Accueil from '@/components/Accueil';\nimport Header from '@/components/Header';\nimport { Inter } from 'next/font/google';\nimport Footer from '@/components/Footer';\nimport './globals.css';\nimport styles from './layout.module.css';\nconst inter = Inter({ subsets: ['latin'] });\nexport default function RootLayout({ children }) {\n  const [page, setPage] = useState('accueil');\n  return (\n    <html lang='en'>\n      <body className={inter.className + ' ' + styles.body}>\n        <Header />\n        {/* {children} */}\n        <main className={styles.main}>\n          {page === 'accueil' ?\n            <Accueil />\n            : page === 'documents' ?\n              <Documents />\n              : page === 'contact' ?\n                <Contact />\n                : page === 'connexion' ?\n                  <Connexion />\n                  : <div>404 - Not Found</div>\n          }\n        </main>\n        <Footer />\n      </body>\n    </html>\n  );\n}"
+    },
+    {
+        "title": "menu_nav",
+        "content": "import styles from './MenuNav.module.css';\nexport default function MenuNav({ setPage }) {\n    return <nav className={styles.nav}>\n        <ul>\n            <li><a href='#' onClick={() => setPage('accueil')}>Accueil</a></li>\n            <li><a href='#' onClick={() => setPage('documents')}>Documents</a></li>\n            <li><a href='#' onClick={() => setPage('contact')}>Contact</a></li>\n            <li><a href='#' onClick={() => setPage('connexion')}>Connexion</a></li>\n        </ul>\n    </nav>;\n}"
+    },
+    {
+        "title": "document",
+        "content": "import { useState } from 'react';\nimport styles from './Documents.module.css';\nexport default function Livres() {\n    const [livres, setLivres] = useState([]);\n    const [newLivre, setNewLivre] = useState('');\n    const addLivre = () => {\n        if (newLivre !== '') {\n            setLivres([...livres, newLivre]);\n            setNewLivre('');\n        }\n    };\n    return (\n        <div className={styles.container}>\n            <h1>Gestion des livres</h1>\n            <div>\n                <input\n                    type='text'\n                    placeholder='Ajouter un livre'\n                    value={newLivre}\n                    onChange={(e) => setNewLivre(e.target.value)}\n                />\n                <button onClick={addLivre}>Ajouter</button>\n            </div>\n            <h2>Liste des livres</h2>\n            <ul>\n                {livres.map((livre, index) => (\n                    <li key={index}>{livre}</li>\n                ))}\n            </ul>\n        </div>\n    );\n}"
+    },
+    {
+        "title": "document_module",
+        "content": ".container{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-top: 2rem;\n}\n.container h1{\n    margin-bottom: 1rem;\n}\n.container h2{\n    margin-top: 1rem;\n}"
+    },
+    {
+        "title": "main1",
+        "content": "<main className={styles.main}>\n{page === 'accueil' ?\n  <Accueil />\n  : page === 'documents' ?\n    <Documents />\n    : page === 'contact' ?\n      <Contact />\n      : page === 'connexion' ?\n        <Connexion />\n        : <div>404 - Not Found</div>\n}\n</main>\n"
+    },
+    {
+        "title": "main2",
+        "content": "<main className={styles.main}>\n{page === 'accueil' && <Accueil />}\n{page === 'documents' && <Documents />}\n{page === 'contact' && <Contact />}\n{page === 'connexion' && <Connexion />}\n</main>\n"
+    },
+    {
+        "title": "main3",
+        "content": "export default function RootLayout({ children }) {\nconst [page, setPage] = useState('accueil');\nlet content;\nif (page === 'accueil') {\ncontent = <Accueil />;\n}\nelse if (page === 'documents') {\ncontent = <Documents />;\n}\nelse if (page === 'contact') {\ncontent = <Contact />;\n}\nelse if (page === 'connexion') {\ncontent = <Connexion />;\n}\nelse {\ncontent = '<div>404 - Not Found</div>';\n}\nreturn (\n    <html lang='en'>\n    <body className={inter.className + ' ' + styles.body}>\n        <Header setPage={setPage} />\n        <main className={styles.main}>\n        {content}\n        </main>\n        <Footer />\n    </body>\n    </html>\n);\n}"
+    }
+]

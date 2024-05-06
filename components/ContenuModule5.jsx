@@ -7,91 +7,10 @@ import Remarque from '@/components/Remarque'
 import LienExterne from '@/components/LienExterne'
 import CodeBlock from '@/components/CodeBlock'
 import DownloadLink from '@/components/DownloadLink';
+import code from '@/public/json/code-module5.json';
+import {getCode} from '@/components/Code';
+
 export default function ContenuModule5() {
-    const layout_code = `'use client'
-    import Header from '@/components/Header'
-    import { Inter } from "next/font/google";
-    import Footer from '@/components/Footer';
-    import "./globals.css";
-    import styles from './layout.module.css';
-    const inter = Inter({ subsets: ["latin"] });
-    export default function RootLayout({ children }) {
-      return (
-        <html lang="en">
-          <body className={inter.className + ' ' + styles.body}>
-            <Header />
-            <main className={styles.main}>
-              {children}
-            </main>
-            <Footer />
-          </body>
-        </html>
-      );
-    }    
-`;
-
-    const page_code = `'use client'
-import Accueil from "@/components/Accueil";
-export default function Home() {
-  return <>
-    <Accueil />
-  </>
-}
-`;
-
-    const code_connexion = `import Connexion from "@/components/Connexion"
-export default function Page(){
-    return <>
-        <Connexion/>
-    </>
-}
-`;
-
-    const code_contact = `import Contact from "@/components/Contact"
-export default function Page(){
-    return <>
-        <Contact/>
-    </>
-}
-`;
-
-    const code_documents = `'use client'
-import Documents from "@/components/Documents"
-export default function Page(){
-    return <>
-        <Documents/>
-    </>
-}
-`;
-
-    const code_menu_nav = `import Link from 'next/link';
-import styles from './MenuNav.module.css';
-export default function MenuNav() {
-    return <nav className={styles.nav}>
-        <ul>
-            <li><Link href="/">Accueil</Link></li>
-            <li><Link href="documents">Documents</Link></li>
-            <li><Link href="contact">Contact</Link></li>
-            <li><Link href="connexion">Connexion</Link></li>
-        </ul>
-    </nav>
-}
-`;
-
-    const code_menu_nav_new = `import styles from './MenuNav.module.css';
-import { useRouter } from 'next/navigation';
-export default function MenuNav() {
-    const routeur = useRouter();
-    return <nav className={styles.nav}>
-        <ul>
-            <li onClick={() => routeur.push('/')}>Accueil</li>
-            <li onClick={() => routeur.push('/documents')}>Documents</li>
-            <li onClick={() => routeur.push('/contact')}>Contact</li>
-            <li onClick={() => routeur.push('/connexion')}>Connexion</li>
-        </ul>
-    </nav>
-}
-`;
     return <>
         <Divider />
         {/* #region Le routage client */}
@@ -138,32 +57,32 @@ export default function MenuNav() {
         <Paragraphe
             contenu="Ci-dessous, le nouveau contenu de 'layout.jsx'"
         />
-        <CodeBlock chemin='/app/layout.jsx' contenu={layout_code} langage='jsx' />
+        <CodeBlock chemin='/app/layout.jsx' contenu={getCode(code, 'layout_code')} langage='jsx' />
         <Item
             item="Modifier '/app/page.jsx'"
             description=" : Etant donné que 'page.jsx' joue le rôle du fichier 'index' habituel, il recevra donc le composant 'Accueil'. Son nouveau code est le suivant:"
         />
-        <CodeBlock chemin='/app/page.jsx' contenu={page_code} langage='jsx' />
+        <CodeBlock chemin='/app/page.jsx' contenu={getCode(code, 'page_code')} langage='jsx' />
         <Item
             item="Code de '/app/connexion/page.jsx'"
             description=" : Importer le composant 'Connexion' dans le fichier 'page.jsx' se trouvant dans le dossier 'connexion' nouvellement créé : "
         />
-        <CodeBlock chemin='/app/connexion/page.jsx' contenu={code_connexion} langage='jsx' />
+        <CodeBlock chemin='/app/connexion/page.jsx' contenu={getCode(code, 'code_connexion')} langage='jsx' />
         <Item
             item="Code de '/app/contact/page.jsx'"
             description=" : Importer le composant 'Contact' dans le fichier 'page.jsx' se trouvant dans le dossier 'contact' nouvellement créé : "
         />
-        <CodeBlock chemin='/app/contact/page.jsx' contenu={code_contact} langage='jsx' />
+        <CodeBlock chemin='/app/contact/page.jsx' contenu={getCode(code, 'code_contact')} langage='jsx' />
         <Item
             item="Code de '/app/documents/page.jsx'"
             description=" : Importer le composant 'Documents' dans le fichier 'page.jsx' se trouvant dans le dossier 'documents' nouvellement créé : "
         />
-        <CodeBlock chemin='/app/documents/page.jsx' contenu={code_documents} langage='jsx' />
+        <CodeBlock chemin='/app/documents/page.jsx' contenu={getCode(code, 'code_documents')} langage='jsx' />
         <Item
             item="Nouveau code de '/Components/MenuNav.jsx'"
             description=" : Toutes les pages étant déjà créées, il est temps de mettre les liens vers elles à partir du composant 'MenuNav'. Pour cela, il faut remplacer le code du composant 'MenuNav' par le code ci-dessous : "
         />
-        <CodeBlock chemin='/Components/MenuNav.jsx' contenu={code_menu_nav} langage='jsx' />
+        <CodeBlock chemin='/Components/MenuNav.jsx' contenu={getCode(code, 'code_menu_nav')} langage='jsx' />
         <Remarque
             type="Remarque"
             contenu="Il est important de noter qu'un nouveau composant de Next a été importer dans le composant 'MenuNav' : il s'agit du composant 'Link'. De plus, la balise '<a>' a été remplacée par ce nouveau Composant."
@@ -212,7 +131,7 @@ export default function MenuNav() {
         <Paragraphe
             contenu="Pour illustrer le fonctionnement de 'useRouter', nous allons récrire notre 'MenuNav.jsx' en l'utilisant. Le nouveau code est le suivant : "
         />
-        <CodeBlock chemin='/Components/MenuNav.jsx' contenu={code_menu_nav_new} langage='jsx' />
+        <CodeBlock chemin='/Components/MenuNav.jsx' contenu={getCode(code, 'code_menu_nav_new')} langage='jsx' />
         <Remarque
             type="Remarque"
             contenu="Comme nous pouvons le constater, le hook 'useRouter' a été importé et utilisé pour faire la redirection de page en cas de clic sur un lien du menu de navigation."

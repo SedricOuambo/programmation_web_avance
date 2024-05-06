@@ -1,0 +1,34 @@
+[
+    {
+        "title": "header",
+        "content": "import styles from './Header.module.css'\nexport default function Header() {\nreturn <header className={styles.header}>\n        <nav className={styles.nav}>\n            <ul>\n                <li><a href='#'>Accueil</a></li>\n                <li><a href='#'>Documents</a></li>\n                <li><a href='#'>Contact</a></li>\n                <li><a href='#'>Connexion</a></li>\n            </ul>\n        </nav>\n    </header>\n}"
+    },
+    {
+        "title": "header_module",
+        "content": ".nav ul {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: wrap;\n    gap: 1rem;\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n}\n.nav a {\n    color: #fff;\n    font-weight: 700;\n}\n.header {\n    padding: 1rem;\n    background-color: var(--first-color);\n}"
+    },
+    {
+        "title": "citation",
+        "content": "import styles from './Citation.module.css'\nexport default function Citation(props) {\n    return <>\n        <div className={styles.citation}>\n            {props.children}\n        </div>\n        <div className={styles.auteur}>\n            - {props.auteur}\n        </div>\n    </>\n}"
+    },
+    {
+        "title": "citation_module",
+        "content": ".citation {\n    font-style: italic;\n}\n.auteur {\n    font-weight: bold;\n    margin-bottom: 1rem;\n}"
+    },
+    {
+        "title": "page",
+        "content": "import Image from 'next/image';\nimport styles from './page.module.css';\nimport Citation from '@/components/Citation';\nexport default function Home() {\n  return (\n    <main className={styles.main}>\n      <Citation auteur='Sedric'>\n        Nous y sommes\n      </Citation>\n      <div className={styles.welcome}>\n        Soyez la bienvenue sur biblio-app\n      </div>\n    </main>\n  );\n}"
+    },
+    {
+        "title": "layout",
+        "content": "import Header from '@/components/Header';\nimport { Inter } from 'next/font/google';\nimport './globals.css';\nconst inter = Inter({ subsets: ['latin'] });\nexport const metadata = {\n  title: 'Biblio-app',\n  description: 'Demo Cours Programmation web avancé',\n};\nexport default function RootLayout({ children }) {\n  return (\n    <html lang='en'>\n      <body className={inter.className}>\n        <Header />\n        {children}\n      </body>\n    </html>\n  );\n}"
+    },
+    {
+        "title": "logo",
+        "content": "<div className={styles.title}>\n<Image\n    src={logo}\n    alt='Logo React'\n    width={80}\n/>\n<h1>Titre du site web</h1>\n</div>\n"
+    },
+    {
+        "title": "logo_css",
+        "content": ".title {\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n    color: #fff;\n}\n"
+    }
+]

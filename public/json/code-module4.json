@@ -1,0 +1,30 @@
+[
+    {
+        "title": "map_demo",
+        "content": "const nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9];\nconst carres = nombres.map((nombre) => nombre * nombre);\nconsole.log(carres);"
+    },
+    {
+        "title": "galerie_code",
+        "content": "import Image from 'next/image'\nimport styles from './Gallerie.module.css'\nexport default function Gallerie({ images }) {\n    return <div className={styles.gallerie}>\n        {/* Usage de map() dans les accolades */}\n        {/* Les clés (key) aident React à identifier quels éléments d’une liste ont changé, ont été ajoutés ou supprimés.  */}\n        {images.map((image, index) =>\n            <Image\n                key={index}\n                src={image.src}\n                alt={image.alt}\n                width={image.width}\n                height={image.height}\n            />\n        )}\n    </div>\n}"
+    },
+    {
+        "title": "import_galerie",
+        "content": "import Gallerie from '@/components/Galerie.jsx'\nimport galleriePokemon from '@/publi gallerie-pokemon.json'"
+    },
+    {
+        "title": "next_config",
+        "content": "/** @type {import('next').NextConfig} */\nconst nextConfig = {\n    images: {\n        remotePatterns: [\n            {\n                protocol: 'https',\n                hostname: 'img.pokemondb.net',\n                port: '',\n                pathname: '/artwork/**'\n            }\n        ]\n    }\n};\nexport default nextConfig;"
+    },    
+    {
+        "title": "titre_code",
+        "content": "import { useState, useEffect } from 'react';\nexport default function Titre() {\n    // variable pour contenir le nombre de clic\n    const [count, setCount] = useState(0);\n    useEffect(() => {\n        // Met à jour le titre du document via l’API du navigateur\n        document.title = `Vous avez cliqué ${count} fois`;\n    });\n    return (\n      <div>\n        <p>Vous avez cliqué {count} fois</p>\n        <button onClick={() => setCount(count + 1)}>\n          Cliquez ici\n        </button>\n      </div>\n    );\n}"
+    },
+    {
+        "title": "timer",
+        "content": "import { useEffect, useState } from 'react'\nimport styles from './Timer.module.css'\nexport default function Timer({ compte }) {\n    const [decompte, setCompte] = useState(compte || 10);\n    useEffect(() => {\n        // Exécuté au chargement du composant dans la page\n        const intervalID = setInterval(() => {\n            if (decompte > 0) {\n                setCompte(decompte - 1);\n            } else {\n                clearInterval(intervalID);\n            }\n        }, 1000);\n        return () => {\n            // Exécuté lorsque le composant est enlevé de la page\n            clearInterval(intervalID);\n        };\n    });\n    return <div className={styles.timer}>{decompte}</div>;\n}"
+    },
+    {
+        "title": "timer_test",
+        "content": "<Timer/>\n<Timer compte={50}/>\n<Timer compte={100}/>"
+    }    
+]

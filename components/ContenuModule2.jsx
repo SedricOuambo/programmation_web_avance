@@ -7,120 +7,10 @@ import Remarque from '@/components/Remarque'
 import LienExterne from '@/components/LienExterne'
 import CodeBlock from '@/components/CodeBlock'
 import DownloadLink from '@/components/DownloadLink';
+import code from '@/public/json/code-module2.json';
+import {getCode} from '@/components/Code';
 
 export default function ContenuModule2() {
-
-    const header = `import styles from './Header.module.css'
-export default function Header() {
-return <header className={styles.header}>
-        <nav className={styles.nav}>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Connexion</a></li>
-            </ul>
-        </nav>
-    </header>
-}
-`;
-
-    const header_module = `.nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.nav a {
-    color: #fff;
-    font-weight: 700;
-}
-.header {
-    padding: 1rem;
-    background-color: var(--first-color);
-}
-`;
-
-    const citation = `import styles from './Citation.module.css'
-export default function Citation(props) {
-    return <>
-        <div className={styles.citation}>
-            {props.children}
-        </div>
-        <div className={styles.auteur}>
-            - {props.auteur}
-        </div>
-    </>
-}
-`;
-
-    const citation_module = `.citation {
-    font-style: italic;
-}
-.auteur {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-`;
-
-    const page = `import Image from "next/image";
-import styles from "./page.module.css";
-import Citation from "@/components/Citation";
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <Citation auteur='Sedric'>
-        Nous y sommes
-      </Citation>
-      <div className={styles.welcome}>
-        Soyez la bienvenue sur biblio-app
-      </div>
-    </main>
-  );
-}
-`;
-
-    const layout = `import Header from '@/components/Header'
-import { Inter } from "next/font/google";
-import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
-export const metadata = {
-  title: "Biblio-app",
-  description: "Demo Cours Programmation web avancé",
-};
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
-}
-`;
-
-    const logo = `<div className={styles.title}>
-<Image
-    src={logo}
-    alt="Logo React"
-    width={80}
-/>
-<h1>Titre du site web</h1>
-</div>
-`;
-
-    const logo_css = `.title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #fff;
-}
-`;
     return <>
         <Divider />
         {/* #region Notion de Framework */}
@@ -151,12 +41,12 @@ export default function RootLayout({ children }) {
             item="Fichier '/components/Header.jsx'"
             description=" : Dans le dossier '/components', créer un fichier nommé 'Header.jsx', puis ajouter le code qui va suivre. Ce fichier contiendra le définition de l'entête de notre application."
         />
-        <CodeBlock chemin='/components/Header.jsx' contenu={header} langage='jsx' />
+        <CodeBlock chemin='/components/Header.jsx' contenu={getCode(code, 'header')} langage='jsx' />
         <Item
             item="Fichier '/components/Header.module.css'"
             description=" : Dans le dossier '/components', créer un fichier nommé 'Header.module.css', puis ajouter le code qui va suivre. Ce fichier contiendra le CSS de Header.jsx"
         />
-        <CodeBlock chemin='/components/Header.module.css' contenu={header_module} langage='css' />
+        <CodeBlock chemin='/components/Header.module.css' contenu={getCode(code, 'header_module')} langage='css' />
         <Remarque
             type='Important'
             contenu="Après la création de notre composant Header, il faut l'ajouter au fichier 'layout.jsx'. Pour cela, il allons lui faire les insertions suivantes"
@@ -179,17 +69,17 @@ export default function RootLayout({ children }) {
             item="Fichier '/components/Citation.jsx'"
             description=" : Dans le dossier '/components', créer un fichier nommé 'Citation.jsx'"
         />
-        <CodeBlock chemin='/components/Citation.jsx' contenu={citation} langage='jsx' />
+        <CodeBlock chemin='/components/Citation.jsx' contenu={getCode(code, 'citation')} langage='jsx' />
         <Item
             item="Fichier '/components/Citation.module.css'"
             description=" : Dans le dossier '/components', créer un fichier nommé 'Citation.module.css'"
         />
-        <CodeBlock chemin='/components/Citation.module.css' contenu={citation_module} langage='css' />
+        <CodeBlock chemin='/components/Citation.module.css' contenu={getCode(code, 'citation_module')} langage='css' />
         <Item
             item="Fichier '/app/page.jsx'"
             description=" : Remplacer le code de '/app/page.jsx' par le code suivant : "
         />
-        <CodeBlock chemin='/app/page.jsx' contenu={page} langage='jsx' />
+        <CodeBlock chemin='/app/page.jsx' contenu={getCode(code, 'page')} langage='jsx' />
         <Remarque
             type='Remarque'
             contenu="Dans l'exemple précédent, {props.children} permet d'acccéder à l'enfant du composant Citation. Vous pouvez à présent vous amuser en ajoutant vos propres citations personnalisées."
@@ -209,7 +99,7 @@ export default function RootLayout({ children }) {
         <Paragraphe
             contenu="Reprenons notre fichier 'layout.jsx'"
         />
-        <CodeBlock chemin='/app/layout.jsx' contenu={layout} langage='jsx' />
+        <CodeBlock chemin='/app/layout.jsx' contenu={getCode(code, 'layout')} langage='jsx' />
         <Remarque
             type='Remarque'
             contenu="Dans notre exemple, le layout a structure de base de notre application avec un en-tête (composant </Header>), un contenu principal (où le contenu des pages s'affichera via {children}), et éventuellement un pied de page (après {children}) pour ceux qui l'ont crée."
@@ -282,7 +172,7 @@ export default function RootLayout({ children }) {
         <Paragraphe
             contenu="Revenons sur notre fichier layout.jsx"
         />
-        <CodeBlock chemin='/app/layout.jsx' contenu={layout} langage='jsx' />
+        <CodeBlock chemin='/app/layout.jsx' contenu={getCode(code, 'layout')} langage='jsx' />
         <Paragraphe
             contenu="La ligne 'import { Inter } from 'next/font/google';' permet d'importer la police Inter du module 'next/font/google'"
         />
@@ -350,11 +240,11 @@ export default function RootLayout({ children }) {
             item="Usage de 'Image'"
             description=" : Juste après la ligne 'return <header ...>' du composant 'Header.jsx', Insérer le code qui va suivre."
         />
-        <CodeBlock chemin='/components/Header.jsx' contenu={logo} langage='jsx' />
+        <CodeBlock chemin='/components/Header.jsx' contenu={getCode(code, 'logo')} langage='jsx' />
         <Item
             item="Modifier CSS"
             description=" : Dans 'Header.module.css', ajouter le code CSS suivant :" />
-        <CodeBlock chemin='/components/Header.module.css' contenu={logo_css} langage='css' />
+        <CodeBlock chemin='/components/Header.module.css' contenu={getCode(code, 'logo_css')} langage='css' />
         <Paragraphe
             contenu="Il ne reste plus qu'à sauvegarder toutes les modifications pour voir le logo apparaitre."
         />

@@ -12,77 +12,10 @@ import { SiVisualstudiocode } from "react-icons/si";
 import DescriptionProjet from '@/components/DescriptionProjet';
 import DescriptionImage from '@/components/DescriptionImage';
 import DownloadLink from '@/components/DownloadLink';
+import code from '@/public/json/code-module1.json';
+import {getCode} from '@/components/Code';
 
 export default function ContenuModule1() {
-    const layout = `import { Inter } from "next/font/google";
-import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
-export const metadata = {
-    title: "Biblio-app",
-    description: "Demo Cours Programmation web avancé",
-};
-export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-        <body className={inter.className}>{children}</body>
-        </html>
-    );
-}
-`;
-
-    const page = `import Image from "next/image";
-import styles from "./page.module.css";
-export default function Home() {
-    return (
-        <main className={styles.main}>
-        <div className={styles.welcome}>
-            Soyez la bienvenue sur biblio-app
-        </div>
-        </main>
-    );
-}
-`;
-
-    const page_module = `.welcome {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem;
-    min-height: 100vh;
-    color: var(--first-color);
-    font-size: var(--big-font-size);
-  }
-`;
-
-    const globals_css = `:root {
-    --hue-color: 165;
-    --first-color: hsl(var(--hue-color), 60%, 33%);
-    /* Les differentes tailles pour les petits ecrans */
-    --big-font-size: 2rem;
-    /************ Font weight ***************/
-    --font-bold: 800;
-    /******** Les differentes marges ***************/
-    --mb-1: 1rem;
-    /****** z index  *****/
-    --z-fixed: 1000;
-}
-/****** Les tailles pour les grands ecrans *************/
-@media screen and (min-width: 968px) {
-:root {
-    --big-font-size: 3rem;
-}
-}
-body.dark {
-    --first-color: #0C0C1E;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-`;
-
     return <>
         <Divider />
         {/* #region Notion de Framework */}
@@ -447,13 +380,13 @@ body.dark {
             contenu="Vous pouvez copier le code grâce au bouton situé à l'extrémité droite en haut du bloc de code."
         />
         <Titre2 title="fichier '/app/layout.js'" />
-        <CodeBlock chemin='/app/layout.js' contenu={layout} langage='jsx' />
+        <CodeBlock chemin='/app/layout.js' contenu={getCode(code, 'layout')} langage='jsx' />
         <Titre2 title="fichier '/app/page.js'" />
-        <CodeBlock chemin='/app/page.js' contenu={page} langage='jsx' />
+        <CodeBlock chemin='/app/page.js' contenu={getCode(code, 'page')} langage='jsx' />
         <Titre2 title="fichier '/app/page.module.css'" />
-        <CodeBlock chemin='/app/page.module.css' contenu={page_module} langage='css' />
+        <CodeBlock chemin='/app/page.module.css' contenu={getCode(code, 'page_module')} langage='css' />
         <Titre2 title="fichier '/app/globals.css'" />
-        <CodeBlock chemin='/app/globals.css' contenu={globals_css} langage='css' />
+        <CodeBlock chemin='/app/globals.css' contenu={getCode(code, 'globals_css')} langage='css' />
         <DownloadLink
             url='./css/globals.css'
             item='globals.css complet'

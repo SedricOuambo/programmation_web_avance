@@ -1,0 +1,30 @@
+[
+    {
+        "title": "layout_code",
+        "content": "'use client'\nimport Header from '@/components/Header'\nimport { Inter } from 'next/font/google';\nimport Footer from '@/components/Footer';\nimport './globals.css';\nimport styles from './layout.module.css';\nconst inter = Inter({ subsets: ['latin'] });\nexport default function RootLayout({ children }) {\n  return (\n    <html lang='en'>\n      <body className={inter.className + ' ' + styles.body}>\n        <Header />\n        <main className={styles.main}>\n          {children}\n        </main>\n        <Footer />\n      </body>\n    </html>\n  );\n}"
+    },
+    {
+        "title": "page_code",
+        "content": "'use client'\nimport Accueil from '@/components/Accueil';\nexport default function Home() {\n  return <>\n    <Accueil />\n  </>;\n}"
+    },
+    {
+        "title": "code_connexion",
+        "content": "import Connexion from '@/components/Connexion';\nexport default function Page() {\n    return <>\n        <Connexion />\n    </>;\n}"
+    },
+    {
+        "title": "code_contact",
+        "content": "import Contact from '@/components/Contact';\nexport default function Page() {\n    return <>\n        <Contact />\n    </>;\n}"
+    },
+    {
+        "title": "code_documents",
+        "content": "'use client'\nimport Documents from '@/components/Documents';\nexport default function Page() {\n    return <>\n        <Documents />\n    </>;\n}"
+    },
+    {
+        "title": "code_menu_nav",
+        "content": "import Link from 'next/link';\nimport styles from './MenuNav.module.css';\nexport default function MenuNav() {\n    return <nav className={styles.nav}>\n        <ul>\n            <li><Link href='/'>Accueil</Link></li>\n            <li><Link href='/documents'>Documents</Link></li>\n            <li><Link href='/contact'>Contact</Link></li>\n            <li><Link href='/connexion'>Connexion</Link></li>\n        </ul>\n    </nav>;\n}"
+    },
+    {
+        "title": "code_menu_nav_new",
+        "content": "import styles from './MenuNav.module.css';\nimport { useRouter } from 'next/navigation';\nexport default function MenuNav() {\n    const routeur = useRouter();\n    return <nav className={styles.nav}>\n        <ul>\n            <li onClick={() => routeur.push('/')}>Accueil</li>\n            <li onClick={() => routeur.push('/documents')}>Documents</li>\n            <li onClick={() => routeur.push('/contact')}>Contact</li>\n            <li onClick={() => routeur.push('/connexion')}>Connexion</li>\n        </ul>\n    </nav>;\n}"
+    }
+]
