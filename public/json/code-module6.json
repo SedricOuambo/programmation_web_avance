@@ -1,0 +1,10 @@
+[
+    {
+        "title": "exemple_robots",
+        "content": "User-agent: *\nDisallow: /admin/\nDisallow: /private/\n\nUser-agent: Googlebot\nAllow: /public/\nDisallow: /private/"
+    },
+    {
+        "title": "robots",
+        "content": "# Autoriser tous les robots\nUser-agent: *\nAllow: /"
+    }
+]

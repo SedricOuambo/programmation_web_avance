@@ -53,7 +53,7 @@ export default function Accueil() {
         <ModuleAcueil
             numero="6"
             titre="Métadonnées et SEO"
-            description="Ajouter les métadonnées aux pages pour les engins de recherche" />
+            description="Optimiser les pages pour une meilleure expérience utilisateur." />
         <ModuleAcueil
             numero="7"
             titre="Les formulaires"
