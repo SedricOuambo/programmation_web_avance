@@ -7,6 +7,5 @@ export default function Footer() {
             <div>Développé par </div>
             <div>Sédric Ouambo Silatchom</div>
         </span>
-        <div> Développeur Full Stack</div>
     </footer>
 }
