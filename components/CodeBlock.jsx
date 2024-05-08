@@ -1,9 +1,10 @@
 'use client'
 import { useState } from 'react';
 import 'prismjs';
-import 'prismjs/components/prism-javascript'; // Chargez les langages nécessaires
-import 'prismjs/components/prism-css'; // Chargez les langages nécessaires
-import 'prismjs/components/prism-jsx'; // Chargez les langages nécessaires
+import 'prismjs/components/prism-javascript'; // Chargez le langage js
+import 'prismjs/components/prism-css'; // Chargez le langage css
+import 'prismjs/components/prism-jsx'; // Chargez le langage jsx
+import 'prismjs/components/prism-xml-doc'; // Chargez le langage xml
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import Prism from 'prismjs';
 import styles from './CodeBlock.module.css';

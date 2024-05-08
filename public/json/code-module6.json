@@ -6,5 +6,25 @@
     {
         "title": "robots",
         "content": "# Autoriser tous les robots\nUser-agent: *\nAllow: /"
+    },
+    {
+        "title": "sitemap",
+        "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n    <url>\n        <loc>https://locallhost:3000/</loc>\n        <lastmod>2024-05-08</lastmod>\n        <changefreq>never</changefreq>\n        <priority>1.0</priority>\n    </url>\n    <url>\n        <loc>https://locallhost:3000/connexion</loc>\n        <lastmod>2024-05-08</lastmod>\n        <changefreq>never</changefreq>\n        <priority>0.7</priority>\n    </url>\n    <url>\n        <loc>https://locallhost:3000/contact</loc>\n        <lastmod>2024-05-08</lastmod>\n        <changefreq>never</changefreq>\n        <priority>0.7</priority>\n    </url>\n    <url>\n        <loc>https://locallhost:3000/documents</loc>\n        <lastmod>2024-05-08</lastmod>\n        <changefreq>never</changefreq>\n        <priority>0.7</priority>\n    </url>\n</urlset>"
+    },
+    {
+        "title": "meta_layout",
+        "content": "export const metadata = {\n    title: 'biblio-app | Accueil',\n    description: 'Site web présentant les fonctionnalités de React et Next.js.',\n    openGraph: {\n      title: 'biblio-app | Accueil',\n      description: 'Site web présentant les fonctionnalités de React et Next.js.',\n      images: ['./react.webp']\n    }\n}\n"
+    },
+    {
+        "title": "meta_connexion",
+        "content": "export const metadata = {\n    title: 'Connexion | biblio-app',\n    description: 'Page de Connexion',\n    openGraph: {\n        title: 'Connexion | biblio-app',\n        description: 'Page de Connexion',\n        images: ['./react.webp']\n    }\n}\n"
+    },
+    {
+        "title": "meta_contact",
+        "content": "export const metadata = {\n    title: 'Contact | biblio-app',\n    description: 'Page de Contact',\n    openGraph: {\n        title: 'Contact | biblio-app',\n        description: 'Page de Contact',\n        images: ['./react.webp']\n    }\n}\n"
+    },
+    {
+        "title": "meta_document",
+        "content": "export const metadata = {\n    title: 'Documents | biblio-app',\n    description: 'Page de Documents',\n    openGraph: {\n        title: 'Documents | biblio-app',\n        description: 'Page de Documents',\n        images: ['./react.webp']\n    }\n}\n"
     }
 ]

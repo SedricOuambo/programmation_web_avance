@@ -17,9 +17,8 @@ export default function Module6() {
     const tabObjectifs = [
         'Notion de Search Engine Optimisation (SEO)',
         "Importance du fichier 'robots.txt'",
-        "Rôle du fichier 'sitemap.xml'",
+        "Le fichier 'sitemap.xml'",
         "Les métadonnées",
-        "Notion de 'Open Graph'",
         "Core Vitals et performance",
         "Évaluer et améliorer un site web",
         'Code source',

@@ -15,11 +15,11 @@ import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Programmation Web Avancé',
-  description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
+  title: 'Programmation web avancé',
+  description: 'Site web présentant différentes fonctionnalités de React et Next.js',
   openGraph: {
-    title: 'Accueil',
-    description: 'Un site web présentant différentes fonctionnalités de React et Next.js',
+    title: 'Programmation web avancé',
+    description: 'Site web présentant différentes fonctionnalités de React et Next.js',
     images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
   },
   manifest: './manifest.webmanifest'

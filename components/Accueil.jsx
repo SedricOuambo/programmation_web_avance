@@ -51,6 +51,7 @@ export default function Accueil() {
             description="Utiliser le routage client pour simuler plusieurs pages dans un site web."
         />
         <ModuleAcueil
+            actif='true'
             numero="6"
             titre="Métadonnées et SEO"
             description="Optimiser les pages pour une meilleure expérience utilisateur." />

@@ -90,6 +90,7 @@ export default function MonBloc() {
                     titre="Routage client et changement de page"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module6"
                     numero="6"
                     titre="Métadonnées et SEO"
