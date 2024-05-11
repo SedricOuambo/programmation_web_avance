@@ -54,11 +54,14 @@ export default function Accueil() {
             actif='true'
             numero="6"
             titre="Métadonnées et SEO"
-            description="Optimiser les pages pour une meilleure expérience utilisateur." />
+            description="Optimiser les pages pour une meilleure expérience utilisateur."
+        />
         <ModuleAcueil
+            actif='true'
             numero="7"
             titre="Les formulaires"
-            description="Créer et valider les formulaires" />
+            description="Créer et valider les formulaires"
+        />
         <ModuleAcueil
             numero="8"
             titre="Notion de contexte"

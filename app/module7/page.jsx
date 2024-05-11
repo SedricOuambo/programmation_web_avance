@@ -1,0 +1,36 @@
+import BlocObjectifs from '@/components/BlocObjectifs';
+import ModuleAcueilGrand from "@/components/ModuleAccueilGrand";
+import ContenuModule7 from '@/components/ContenuModule7';
+
+export const metadata = {
+    title: 'Les formulaires',
+    description: "Créer et valider un formulaire dans une projet React avec Next.js.",
+    openGraph: {
+        title: 'Les formulaires',
+        description: "Créer et valider un formulaire dans une projet React avec Next.js.",
+        images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
+    },
+    manifest: './manifest.webmanifest'
+};
+
+export default function Module7() {
+    const tabObjectifs = [
+        "Le hook 'useRef' et le DOM",
+        "Formulaire non contrôlé et validation",
+        "Formulaire contrôlé et validation",
+        "Formulaire avec la bibliothèque 'react-hook-form'",
+        "Envoyer des courriels",
+        'Code source',
+        'Travail à faire'
+    ]
+    return <>
+        <ModuleAcueilGrand
+            numero="7"
+            titre="Les formulaires"
+            description="A la fin de ce cinquième module, l'étudiant devra être capable de créer et valider des formulaires dans un projet React avec Next.js."        />
+        <BlocObjectifs
+            listeObjectifs={tabObjectifs}
+        />
+        <ContenuModule7 />
+    </>
+}

@@ -96,6 +96,7 @@ export default function MonBloc() {
                     titre="Métadonnées et SEO"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module7"
                     numero="7"
                     titre="Les formulaires"
