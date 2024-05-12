@@ -130,6 +130,7 @@ export default function ContenuModule7() {
             contenu="La demo se fera lors du déroulement du module7 en salle de classe."
         />
         {/* // Envoyer des courriels*/}
+        
         <Divider />
         {/* #region Code source */}
         <Titre1 title='Code source' index='5' />

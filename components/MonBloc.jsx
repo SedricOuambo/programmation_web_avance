@@ -102,6 +102,7 @@ export default function MonBloc() {
                     titre="Les formulaires"
                 />
                 <MonSousBloc
+                    actif='true'
                     chemin="/module8"
                     numero="8"
                     titre="Notion de contexte"

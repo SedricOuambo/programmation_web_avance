@@ -1,0 +1,54 @@
+[
+    {
+        "title": "ThemeProvider",
+        "content": "'use client'\nimport { createContext, useContext, useState } from 'react' \n// Crée un contexte pour stocker le thème.\nconst ThemeContext = createContext(); \n// Définit un composant React appelé ThemeProvider pour fournir le thème à ses enfants.\nexport function ThemeProvider({children}) { \n    const [theme, setTheme] = useState('light'); \n    // Rend le contexte ThemeContext disponible pour ses enfants avec la valeur [theme, setTheme].\n    return <ThemeContext.Provider value={[theme, setTheme]> {/* Rend les composants enfants du ThemeProvider. */}\n        {children} \n    </ThemeContext.Provider> \n}\n\n// Définit un hook personnalisé useTheme pour utiliser le thème actuel.\nexport function useTheme() { \n    // Utilise le hook useContext pour accéder au thème actuel et à la fonction pour le modifier.\n    const [theme, setTheme] = useContext(ThemeContext);\n    // Retourne le thème actuel et la fonction pour le modifier. \n    return [theme, setTheme]; \n}"
+    },
+    {
+        "title": "NavNew",
+        "content": "'use client'\nimport Link from 'next/link';\nimport styles from './MenuNav.module.css';\nimport { useTheme } from './ThemeProvider'; //Importer le hook personnalisé\nexport default function MenuNav() {\n    const [theme, setTheme] = useTheme();\n    const handleTheme = () => {\n        if (theme === 'light') {\n            setTheme('dark');\n        }\n        else {\n            setTheme('light');\n        }\n    }\n    return <nav className={styles.nav}>\n        <ul>\n            <li><Link href=\"/\">Accueil</Link></li>\n            <li><Link href=\"/documents\">Documents</Link></li>\n            <li><Link href=\"/contact\">Contact</Link></li>\n            <li><Link href=\"/connexion\">Connexion</Link></li>\n        </ul>\n        <label>\n            Mode Sombre:\n            <input\n                type=\"checkbox\"\n                checked={theme === 'dark'}\n                onChange={handleTheme}\n            />\n        </label>\n    </nav>\n}"
+    },
+    {
+        "title": "bodyCode",
+        "content": "<body className={inter.className + ' ' + styles.body}>\n <ThemeProvider>\n    <Header />\n    <main className={styles.main}>\n      {children}\n    </main>\n    <Footer />\n </ThemeProvider>\n</body>"
+    },
+    {
+        "title": "bodyCode2",
+        "content": "<body className={inter.className + ' ' + styles.body}>\n <LocaleProvider>\n   <ThemeProvider>\n    <Header />\n    <main className={styles.main}>\n      {children}\n    </main>\n    <Footer />\n   </ThemeProvider>\n  <LocaleProvider>\n</body>"
+    },
+    {
+        "title": "headerCode",
+        "content": "import Image from 'next/image';\n    import logo from '@/public/react.webp';\n    import MenuNav from './MenuNav';\n    import { useTheme } from './ThemeProvider'; //Importer le hook personnalisé pour manipuler le thème\n    export default function Header() {\n        const [theme, setTheme] = useTheme();\n        return <header className={styles.header +' '+\n        (theme === 'light'? styles.light : styles.dark)\n        }>\n            <div className={styles.title}>\n                <Image\n                    src={logo}\n                    alt=\"Logo React\"\n                    width={80}\n                />\n                <h1>Biblio App</h1>\n            </div>\n            <MenuNav/>\n        </header>\n    }"
+    },
+    {
+        "title": "headerCss",
+        "content": ".light{\n    background-color: var(--first-color);\n}\n.dark{\n    background-color: #000;\n}\n"
+    },
+    {
+        "title": "ThemeNew",
+        "content": "'use client'\nimport { createContext, useContext, useEffect, useState } from 'react'\n// Crée un contexte pour stocker le thème.\nconst ThemeContext = createContext();\n// Définit un composant React appelé ThemeProvider pour fournir le thème à ses enfants.\nexport function ThemeProvider({ children }) {\n    const [theme, setTheme] = useState('light');\n    useEffect(() => {\n        setTheme(localStorage.getItem('theme') || 'light');\n    }, [setTheme]);\n    // Rend le contexte ThemeContext disponible pour ses enfants avec la valeur [theme, setTheme].\n    return <ThemeContext.Provider value={[theme, setTheme]}> {/* Rend les composants enfants du ThemeProvider. */}\n        {children}\n    </ThemeContext.Provider>\n}\n// Définit un hook personnalisé useTheme pour utiliser le thème actuel.\nexport function useTheme() {\n    // Utilise le hook useContext pour accéder au thème actuel et à la fonction pour le modifier.\n    const [theme, setTheme] = useContext(ThemeContext);\n    const setThemeWithStorage = (theme) => {\n        localStorage.setItem('theme', theme);\n        setTheme(theme);\n    }\n    // Retourne le thème actuel et la fonction pour le modifier. \n    return [theme, setThemeWithStorage];\n}    \n"
+    },
+    {
+        "title": "useFormInput",
+        "content": "import { useState } from 'react';\nexport function useFormInput(valeurInitiale) {\n  const [value, setValue] = useState(valeurInitiale);\n  function handleChange(e) {\n    setValue(e.target.value);\n  }\n  const inputProps = {\n    value: value,\n    onChange: handleChange\n  };\n  return inputProps;\n}   \n"
+    },
+    {
+        "title": "FormControlleNew",
+        "content": "'use client'\nimport styles from './Form.module.css';\nimport { useFormInput } from './useFormInput';\nexport default function FormControlle() {\n    const nom = useFormInput('');\n    const courriel = useFormInput('');\n    const handleSubmit = (event) => {\n        event.preventDefault(); // Empêche la soumission par défaut du formulaire\n        console.log(`Nom: ${nom.value}, Courriel: ${courriel.value}`); //Affichage du nom et courriel\n    };\n    return <>\n        <form onSubmit={handleSubmit} className={styles.form}>\n            <div>\n                <label>Nom:</label>\n                <input {...nom} />\n            </div>\n            <div>\n                <label>Email:</label>\n                <input {...courriel} />\n            </div>\n            <button type=\"submit\">Envoyer</button>\n        </form>\n    </>;\n}"
+    },
+    {
+        "title": "fr",
+        "content": "{\n    \"app.header.title\": \"Biblio App\",\n    \"app.header.menu.lien1\": \"Accueil\",\n    \"app.header.menu.lien2\": \"Documents\",\n    \"app.header.menu.lien3\": \"Contact\",\n    \"app.header.menu.lien4\": \"Connexion\",\n    \"app.header.theme\": \"Mode sombre\"\n}"
+    },
+    {
+        "title": "en",
+        "content": "{\n    \"app.header.title\": \"Biblio App\",\n    \"app.header.menu.lien1\": \"Home\",\n    \"app.header.menu.lien2\": \"Documents\",\n    \"app.header.menu.lien3\": \"Contact\",\n    \"app.header.menu.lien4\": \"Log In\",\n    \"app.header.theme\": \"Dark mode\"\n}"
+    },
+    {
+        "title": "Locale",
+        "content": "'use client'\nimport { createContext, useContext, useState } from 'react'\nimport { IntlProvider } from 'react-intl'\nimport englishData from '@/i18n/en.json' // Importation des données de traduction anglaises\nimport frenchData from '@/i18n/fr.json' // Importation des données de traduction françaises\n// Création d'un objet contenant les données de traduction pour chaque langue supportée\nconst translations = {\n    en: englishData,\n    fr: frenchData\n}\n// Création du contexte de localisation\nconst LocaleContext = createContext()\n// Component pour fournir la localisation à l'application\nexport function LocaleProvider({ children }) {\n    // State pour gérer la langue sélectionnée\n    const [locale, setLocale] = useState('fr');\n    // Rendu du contexte de localisation et du composant IntlProvider de react-intl\n    return (\n        <LocaleContext.Provider value={[locale, setLocale]}>\n            {/*IntlProvider avec la langue actuelle et les traductions correspondantes */}\n            <IntlProvider locale={locale} messages={translations[locale]}>\n                {/* Rendu des enfants de LocaleProvider */}\n                {children}\n            </IntlProvider>\n        </LocaleContext.Provider>\n    );\n}\n// Hook personnalisé pour accéder à la localisation\nexport function useLocale() {\n    const [locale, setLocale] = useContext(LocaleContext);\n    return [locale, setLocale];\n}"
+    },
+    {
+        "title": "MenuNew",
+        "content": "'use client'\nimport Link from 'next/link';\nimport styles from './MenuNav.module.css';\nimport { useTheme } from './ThemeProvider'; //Importer le hook personnalisé pour manipuler le thème\nimport { useLocale } from './LocaleProvider';\nimport { FormattedMessage } from 'react-intl'\nexport default function MenuNav() {\n    const [theme, setTheme] = useTheme();\n    const handleTheme = () => {\n        if (theme === 'light') {\n            setTheme('dark');\n        }\n        else {\n            setTheme('light');\n        }\n    }\n    const [locale, setLocale] = useLocale();\n    const handleLocale = () => {\n        if (locale === 'fr') {\n            setLocale('en');\n        }\n        else {\n            setLocale('fr');\n        }\n    }\n    return <nav className={styles.nav}>\n        <ul>\n            <li><Link href=\"/\"><FormattedMessage id='app.header.menu.lien1'/></Link></li>\n            <li><Link href=\"/documents\"><FormattedMessage id='app.header.menu.lien2'/></Link></li>\n            <li><Link href=\"/contact\"><FormattedMessage id='app.header.menu.lien3'/></Link></li>\n            <li><Link href=\"/connexion\"><FormattedMessage id='app.header.menu.lien4'/></Link></li>\n        </ul>\n        <label>\n            Mode Sombre:\n            <input\n                type=\"checkbox\"\n                checked={theme === 'dark'}\n                onChange={handleTheme}\n            />\n        </label>\n        <div>\n            <label>\n                EN :\n                <input\n                    type=\"checkbox\"\n                    checked={locale === 'en'}\n                    onChange={handleLocale} />\n            </label>\n        </div>\n    </nav>\n}"
+    }
+]

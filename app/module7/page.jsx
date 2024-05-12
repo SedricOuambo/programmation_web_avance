@@ -4,10 +4,10 @@ import ContenuModule7 from '@/components/ContenuModule7';
 
 export const metadata = {
     title: 'Les formulaires',
-    description: "Créer et valider un formulaire dans une projet React avec Next.js.",
+    description: "Créer et valider un formulaire dans un projet React avec Next.js.",
     openGraph: {
         title: 'Les formulaires',
-        description: "Créer et valider un formulaire dans une projet React avec Next.js.",
+        description: "Créer et valider un formulaire dans un projet React avec Next.js.",
         images: ['https://sedricouambo.github.io/programmation_web_avance/react.png']
     },
     manifest: './manifest.webmanifest'
@@ -27,7 +27,7 @@ export default function Module7() {
         <ModuleAcueilGrand
             numero="7"
             titre="Les formulaires"
-            description="A la fin de ce cinquième module, l'étudiant devra être capable de créer et valider des formulaires dans un projet React avec Next.js."        />
+            description="A la fin de ce module, l'étudiant devra être capable de créer et valider des formulaires dans un projet React avec Next.js."        />
         <BlocObjectifs
             listeObjectifs={tabObjectifs}
         />

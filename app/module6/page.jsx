@@ -28,7 +28,7 @@ export default function Module6() {
         <ModuleAcueilGrand
             numero="6"
             titre="Métadonnées et SEO"
-            description="A la fin de ce cinquième module, l'étudiant devra être capable d'optimiser les pages de son application web pour une meilleure expérience utilisateur."        />
+            description="A la fin de ce module, l'étudiant devra être capable d'optimiser les pages de son application web pour une meilleure expérience utilisateur."        />
         <BlocObjectifs
             listeObjectifs={tabObjectifs}
         />

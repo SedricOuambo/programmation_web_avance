@@ -63,9 +63,10 @@ export default function Accueil() {
             description="Créer et valider les formulaires"
         />
         <ModuleAcueil
+        actif='true'
             numero="8"
             titre="Notion de contexte"
-            description="Les différents types de contextes et leur utilité."
+            description="Partage global des données dans un projet React avec Next.js."
         />
 
         <UaAccueil
