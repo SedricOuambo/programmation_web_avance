@@ -67,3 +67,11 @@
         font-size: var(--h2-font-size);
     }
 }
+
+@media screen and (min-width: 1424px) {
+    .numero {
+        width: 4rem;
+        height: 4rem;
+        font-size: var(--h1-font-size);
+    }
+}
