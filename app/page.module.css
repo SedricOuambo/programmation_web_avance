@@ -40,6 +40,12 @@
   display: none;
 } */
 
+@media screen and (min-width: 824px) {
+  .section_main{
+    padding: 0 4rem;
+  }
+}
+
 @media screen and (min-width: 1224px){
   /* .section_main{
     width: calc(100% - var(--slidebar-width))
@@ -49,6 +55,10 @@
   }
   .icon{
     display: none;
+  }
+
+  .section_main{
+    padding: 0 0;
   }
   
 }

@@ -1,21 +1,21 @@
-.containeur{
+.containeur {
     position: sticky;
     top: 1rem;
     z-index: var(--z-fixed);
 }
 
-.sub_containeur{
+.sub_containeur {
     position: relative;
 }
 
-.mon_sous_bloc{
+.mon_sous_bloc {
     position: absolute;
     top: 4.5rem;
     display: block;
 }
 
 @media screen and (min-width : 1024px) {
-    .containeur{
+    /* .containeur{
         width: 1024px;
-    }
+    } */
 }
