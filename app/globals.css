@@ -67,6 +67,18 @@
 /****** Les tailles pour les grands ecrans *************/
 @media screen and (min-width: 968px) {
   :root {
+    --big-font-size: 1.7rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: .75rem;
+    --normal-font-size: .95rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+@media screen and (min-width: 1424px) {
+  :root {
     --big-font-size: 2.75rem;
     --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;

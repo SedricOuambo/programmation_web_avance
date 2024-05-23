@@ -53,10 +53,10 @@
         font-size: var(--big-font-size);
     }
 
-    .numero{
-        width: 4rem;
-        height: 4rem;
-        font-size: var(--h1-font-size);
+    .numero {
+        width: 3rem;
+        height: 3rem;
+        font-size: var(--h2-font-size);
     }
 
     .bloc{
