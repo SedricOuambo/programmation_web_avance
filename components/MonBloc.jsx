@@ -81,7 +81,7 @@ export default function MonBloc() {
                     actif='true'
                     chemin="/module4"
                     numero="4"
-                    titre="Partage des données entre composants"
+                    titre="Effet et affichage répétitif"
                 />
                 <MonSousBloc
                     actif='true'
