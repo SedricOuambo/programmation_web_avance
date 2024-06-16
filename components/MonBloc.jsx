@@ -19,7 +19,7 @@ export default function MonBloc() {
         menu === 'Active' ? setMenu('NotActive') : setMenu('Active');
     }
 
-    return <div>
+    return <div className={styles.sup_container}>
         <div className={styles.bloc}>
             <div className={styles.blocGauche}>
                 <div className={styles.menuIcon}
@@ -52,76 +52,78 @@ export default function MonBloc() {
             </div>
         </div>
         <div className={styles.sous_bloc + ' ' + (menu === 'Active' ? styles.display_sous_bloc : "")}>
-            <div className={styles.elements}>
-                <MonSousBloc
-                    actif='true'
-                    chemin="/"
-                    numero="0"
-                    titre="Plan du cours"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module1"
-                    numero="1"
-                    titre="Créer un projet React avec Next.js"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module2"
-                    numero="2"
-                    titre="Les composants et props"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module3"
-                    numero="3"
-                    titre="Etat, événement et affichage"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module4"
-                    numero="4"
-                    titre="Effet et affichage répétitif"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module5"
-                    numero="5"
-                    titre="Routage client et changement de page"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module6"
-                    numero="6"
-                    titre="Métadonnées et SEO"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module7"
-                    numero="7"
-                    titre="Les formulaires"
-                />
-                <MonSousBloc
-                    actif='true'
-                    chemin="/module8"
-                    numero="8"
-                    titre="Notion de contexte"
-                />
-                <MonSousBloc
-                    chemin="/module9"
-                    numero="9"
-                    titre="Rendu avec Next.js"
-                />
-                <MonSousBloc
-                    chemin="/module10"
-                    numero="10"
-                    titre="Nouvelles fonctionnalités de Next.js"
-                />
-                <MonSousBloc
-                    chemin="/module11"
-                    numero="11"
-                    titre="Progressive Web App (PWA)"
-                />
+            <div className={styles.border}>
+                <div className={styles.elements}>
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/"
+                        numero="0"
+                        titre="Plan du cours"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module1"
+                        numero="1"
+                        titre="Créer un projet React avec Next.js"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module2"
+                        numero="2"
+                        titre="Les composants et props"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module3"
+                        numero="3"
+                        titre="Etat, événement et affichage"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module4"
+                        numero="4"
+                        titre="Effet et affichage répétitif"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module5"
+                        numero="5"
+                        titre="Routage client et changement de page"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module6"
+                        numero="6"
+                        titre="Métadonnées et SEO"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module7"
+                        numero="7"
+                        titre="Les formulaires"
+                    />
+                    <MonSousBloc
+                        actif='true'
+                        chemin="/module8"
+                        numero="8"
+                        titre="Notion de contexte"
+                    />
+                    <MonSousBloc
+                        chemin="/module9"
+                        numero="9"
+                        titre="Rendu avec Next.js"
+                    />
+                    <MonSousBloc
+                        chemin="/module10"
+                        numero="10"
+                        titre="Nouvelles fonctionnalités de Next.js"
+                    />
+                    <MonSousBloc
+                        chemin="/module11"
+                        numero="11"
+                        titre="Progressive Web App (PWA)"
+                    />
+                </div>
             </div>
         </div>
     </div>

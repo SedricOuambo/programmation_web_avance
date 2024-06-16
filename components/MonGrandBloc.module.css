@@ -2,20 +2,10 @@
     position: sticky;
     top: 1rem;
     z-index: var(--z-fixed);
+    margin: 1rem 1rem;
+    margin-bottom: 0rem;
 }
 
 .sub_containeur {
     position: relative;
-}
-
-.mon_sous_bloc {
-    position: absolute;
-    top: 4.5rem;
-    display: block;
-}
-
-@media screen and (min-width : 1024px) {
-    /* .containeur{
-        width: 1024px;
-    } */
 }

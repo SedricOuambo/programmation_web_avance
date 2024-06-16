@@ -40,9 +40,9 @@ export default function RootLayout({
                 <ThemeProvider>
                   <ThemeColorProvider>
                     <Header />
+                    <MonGrandBloc />
                     <main className={styles.main}>
                       <section className={styles.section_main}>
-                        <MonGrandBloc />
                         <div className={styles.children}>
                           {children}
                         </div>
