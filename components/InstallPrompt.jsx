@@ -39,15 +39,17 @@ export default function InstallPrompt() {
     }
 
     return installPrompt && (currentDate - installDate) >= 86400 &&
-        <div className={styles.banniere}>
-            <div>
-                <span onClick={handleInstall}>
-                    <HiDownload />
-                    Cliquez ici pour installer l&apos;application!
+        <div className={styles.sup_container}>
+            <div className={styles.banniere}>
+                <div>
+                    <span onClick={handleInstall}>
+                        <HiDownload />
+                        Cliquez ici pour installer l&apos;application!
+                    </span>
+                </div>
+                <span onClick={handleClose}>
+                    <IoIosCloseCircle />
                 </span>
             </div>
-            <span onClick={handleClose}>
-                <IoIosCloseCircle />
-            </span>
         </div>
 }
