@@ -3,13 +3,11 @@ import styles from './ModuleAccueil.module.css'
 import Link from 'next/link'
 import { useModuleActif } from './Provider/ModuleActifProvider';
 import { useTitreModule } from './Provider/TitreModuleProvider';
-import { useMenuActif } from './Provider/MenuActifProvider';
 
 export default function ModuleAcueil(props) {
 
     const [moduleActif, setModuleActif] = useModuleActif();
     const [titreModule, setTitreModule] = useTitreModule();
-    const [menu, setMenu] = useMenuActif();
 
     return <Link href={'module' + props.numero}
         onClick={() => {

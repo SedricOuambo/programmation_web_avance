@@ -2,7 +2,6 @@
 import styles from './NavBar.module.css';
 import { useModuleActif } from './Provider/ModuleActifProvider';
 import { useTitreModule } from './Provider/TitreModuleProvider';
-import { useMenuActif } from './Provider/MenuActifProvider';
 import { useThemeColor } from './Provider/ThemeColorProvider';
 import { useTheme } from 'next-themes'
 import Link from 'next/link';
@@ -39,7 +38,6 @@ export default function NavBar() {
     const handleClicActif = () => {
         actif === 'false' ? setActif('true') : setActif('false')
     }
-    const [menu, setMenu] = useMenuActif();
     const [moduleActif, setModuleActif] = useModuleActif();
     const [titreModule, setTitreModule] = useTitreModule();
 
@@ -49,7 +47,6 @@ export default function NavBar() {
             onClick={() => {
                 setModuleActif(0);
                 setTitreModule('Plan du cours');
-                setMenu('NotActive');
             }}>
             Programmation Web Avancé
         </Link>

@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import styles from './page.module.css';
 import { ModuleActifProvider } from "@/components/Provider/ModuleActifProvider";
 import { TitreModuleProvider } from "@/components/Provider/TitreModuleProvider";
-import { MenuActifProvider } from '@/components/Provider/MenuActifProvider';
 import { InstalledDateProvider } from '@/components/Provider/InstalledDateProvider';
 import { ThemeColorProvider } from '@/components/Provider/ThemeColorProvider';
 import { ThemeProvider } from 'next-themes'
@@ -35,7 +34,6 @@ export default function RootLayout({
       <body className={inter.className + ' ' + styles.body}>
         <ModuleActifProvider>
           <TitreModuleProvider>
-            <MenuActifProvider>
               <InstalledDateProvider>
                 <ThemeProvider>
                   <ThemeColorProvider>
@@ -52,7 +50,6 @@ export default function RootLayout({
                   </ThemeColorProvider>
                 </ThemeProvider>
               </InstalledDateProvider>
-            </MenuActifProvider>
           </TitreModuleProvider>
         </ModuleActifProvider>
       </body>
