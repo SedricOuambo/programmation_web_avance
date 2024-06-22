@@ -128,7 +128,7 @@ export default function ContenuModule7() {
         />
         <Remarque
             type="DEMO"
-            contenu="La vidéo qui va suivre nous présente comment utiliser EmailJS pour l'envoi des courriels."
+            contenu="La vidéo qui va suivre nous présentera comment utiliser EmailJS pour envoyer des courriels."
         />
         <DownloadLink
             url='./code-source/biblio-app-emailJS.zip'
