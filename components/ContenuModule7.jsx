@@ -7,6 +7,7 @@ import Remarque from '@/components/Remarque'
 import LienExterne from '@/components/LienExterne'
 import CodeBlock from '@/components/CodeBlock'
 import DownloadLink from '@/components/DownloadLink';
+import YoutubeVideo from '@/components/YoutubeVideo';
 import code from '@/public/json/code-module7.json';
 import { getCode } from '@/components/Code';
 
@@ -126,11 +127,16 @@ export default function ContenuModule7() {
             contenu="Parmi les API pouvant être utilisées pour envoyer des courriels côté client, on peut citer : EmailJS, Formspree, SMTPJS, Email Octopus, SendGrid et bien d'autres. Dans le cadre de ce cours, nous utiliserons EMAILJS."
         />
         <Remarque
-            type="Remarque"
-            contenu="La demo se fera lors du déroulement du module7 en salle de classe."
+            type="DEMO"
+            contenu="La vidéo qui va suivre nous présente comment utiliser EmailJS pour l'envoi des courriels."
         />
+        <DownloadLink
+            url='./code-source/biblio-app-emailJS.zip'
+            item='Code source lié à la vidéo'
+        />
+        <YoutubeVideo videoId="3j8JvvU0Ndo" />
         {/* // Envoyer des courriels*/}
-        
+
         <Divider />
         {/* #region Code source */}
         <Titre1 title='Code source' index='5' />
