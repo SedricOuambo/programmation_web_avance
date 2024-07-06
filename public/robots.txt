@@ -1,3 +1,5 @@
 # Allow all crawler
 User-agent: *
 Allow: /
+
+Sitemap: https://sedricouambo.github.io/programmation_web_avance/sitemap.xml

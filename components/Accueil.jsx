@@ -63,7 +63,7 @@ export default function Accueil() {
             description="Créer et valider les formulaires"
         />
         <ModuleAcueil
-        actif='true'
+            actif='true'
             numero="8"
             titre="Notion de contexte"
             description="Partage global des données dans un projet React avec Next.js."
@@ -77,6 +77,7 @@ export default function Accueil() {
             objectif2="Préparer ses applications web pour les rendre progressives."
         />
         <ModuleAcueil
+            actif='true'
             numero="9"
             titre="Rendu avec Next.js"
             description="Les types de rendus avec Next.js"

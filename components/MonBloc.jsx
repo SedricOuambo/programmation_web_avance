@@ -175,6 +175,7 @@ export default function MonBloc() {
                         onClick={handleMenuClick}
                     />
                     <MonSousBloc
+                        actif='true'
                         chemin="/module9"
                         numero="9"
                         titre="Rendu avec Next.js"

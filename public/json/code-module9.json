@@ -1,0 +1,22 @@
+[
+    {
+        "title": "en_json",
+        "content": "\"app.header.menu.lien5\": \"Store\","
+    },
+    {
+        "title": "fr_json",
+        "content": "\"app.header.menu.lien5\": \"Magasin\","
+    },
+    {
+        "title": "menu_nav",
+        "content": "<li><Link href=\"/magasin\"><FormattedMessage id='app.header.menu.lien5'/></Link></li>"
+    },
+    {
+        "title": "page1",
+        "content": "import Image from 'next/image'\nimport Link from 'next/link'\nimport inventaire from '@/public/inventaire.json'\nexport default function Magasin() {\n    return <>\n        <h2>Magasin</h2>\n        <ul>\n            {inventaire.map((produit) =>\n                <li key={produit.slug}>\n                    <Image\n                        src={produit.image}\n                        alt={produit.nom}\n                        width={32}\n                        height={32}\n                    />\n                    <div>{produit.nom}</div>\n                    <Link href={`\/magasin\/${produit.slug}`}>Plus d&apos;information</Link>\n                </li>\n            )}\n        </ul>\n    </>\n}"
+    },
+    {
+        "title": "page2",
+        "content": "// Importation des données de l'inventaire depuis un fichier JSON\nimport inventaire from '@/public/inventaire.json';\nimport Image from 'next/image';\nimport Link from 'next/link';\n\n// Indique que les paramètres sont déterminés de manière statique\nexport const dynamicParams = false;\n\n// Fonction pour générer des chemins statiques dynamiques au moment du build\n// Cette fonction est utilisée par Next.js pour créer les pages statiques pour chaque produit\nexport function generateStaticParams() {\n    return inventaire.map(\n        (produit) => ({ produit: produit.slug }) // Génère un objet avec le slug du produit comme paramètre\n    );\n}\n\n// Composant de page pour afficher les informations d'un produit\n// Ce composant reçoit les paramètres dynamiques via les props\nexport default function Produit({ params }) {\n    const produitSlug = params.produit; // Récupère le slug du produit à partir des paramètres\n    const produitFinal = inventaire.find(\n        (produit) => produit.slug === produitSlug // Trouve le produit correspondant dans l'inventaire en utilisant le slug\n    );\n\n    // Rendu de la page avec les informations du produit\n    return (\n        <>\n            <h2>{produitFinal.nom}</h2>\n            <Image \n                src={produitFinal.image} \n                alt={produitFinal.nom} \n                width={32}\n                height={32} \n            />\n            <p>{produitFinal.description}</p>\n            <Link href=\"/magasin\">Retour au magasin</Link>\n        </>\n    );\n}"
+    }
+]
