@@ -5,6 +5,7 @@ import UaAccueil from './UaAccueil';
 
 export default function Accueil() {
     return <div className={styles.contenu_accueil}>
+        <div>Test</div>
         <UaAccueil
             numero="1"
             titre="Application web monopage"
