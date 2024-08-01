@@ -5,7 +5,6 @@ import UaAccueil from './UaAccueil';
 
 export default function Accueil() {
     return <div className={styles.contenu_accueil}>
-        <div>Test</div>
         <UaAccueil
             numero="1"
             titre="Application web monopage"
@@ -93,6 +92,5 @@ export default function Accueil() {
             titre="Progressive Web App (PWA)"
             description="Rendre une application web installable sur PC et mobile"
         />
-        {/* ddd */}
     </div>
 }
