@@ -8,7 +8,7 @@ export default function Accueil() {
     <div className={styles.contenu_accueil}>
       <UaAccueil
         numero="1"
-        titre="Application web monopagee"
+        titre="Application web monopage"
         objectif1="Créer des pages web utilisant diverses librairies et technologies émergentes qui sont présentement très populaires dans l'industrie."
         objectif2="Séparer le code en modules et en composants pour faciliter le développement et la maintenance des projets web."
       />
