@@ -4,8 +4,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Programmation web avanc\u00e9e",
-  "short_name": "Programmation web avanc\u00e9e",
+  "name": "Programmation web avanc\u00e9",
+  "short_name": "Programmation web avanc\u00e9",
   "description": "Un site web d\u00e9montrant les options de la cr\u00e9ation d'une application web  moderne avec React en utilisant la plateforme Next.js",
   "icons": [
     {
